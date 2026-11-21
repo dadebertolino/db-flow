@@ -1,20 +1,21 @@
 # DB Flow — Stato del progetto (per riprendere in una nuova sessione)
 
-Aggiornato al 19 novembre 2026. Guida di sviluppo originale: [SVILUPPO.md](SVILUPPO.md).
+Aggiornato al 21 novembre 2026. Guida di sviluppo originale: [SVILUPPO.md](SVILUPPO.md).
 
 ## In breve
 
 App Flutter (iOS, iPadOS, Android e macOS) per insegnanti e studenti: diagrammi di flusso strutturati ed eseguibili, generazione di codice, diagrammi Arduino. Offline, nessun account, nessuna raccolta dati.
 
-- **Repository**: https://github.com/dadebertolino/db-flow, **privato**, branch `main`. CI GitHub Actions verde: deny-list, formattazione, analisi, test.
-- **Diventerà pubblico** solo quando l'app uscirà sugli store, per scelta dell'autore. Non renderlo pubblico prima. Il repository è già pronto (vedi «Rendere pubblico il repository»).
+- **Repository**: https://github.com/dadebertolino/db-flow, **pubblico dal 21 novembre 2026**, branch `main`. CI GitHub Actions verde: deny-list, formattazione, analisi, test.
+- **Pubblicata** (21 novembre 2026): **Google Play** (Android) e **Mac App Store** (macOS). iPhone/iPad: stato da verificare in App Store Connect. Windows: dopo (vedi «Da fare»).
+- Essendo pubblico, nel repository non vanno **mai** informazioni private: percorsi del computer, identificativi di dispositivi o simulatori, dettagli dei certificati, password. I commit di questo repository usano `info@davidebertolino.it`.
 - **Flutter 3.47.2 / Dart 3.13.2**, fissati anche in CI (`.github/workflows/ci.yml`). Vanno aggiornati insieme.
 - **arduino-cli 1.6.0 e core `arduino:avr` 1.8.8**, come nell'Arduino IDE del Mac, installati anche in CI: lì i test compilano davvero gli sketch per tutte le schede. Vanno aggiornati insieme.
 - **Test**: 474, tutti verdi. Comando: `flutter test`.
 - **Versione**: **1.0.0+1** (per l'uscita), definita in `pubspec.yaml` e in `lib/app_info.dart`; un test controlla che coincidano. A ogni nuovo caricamento su App Store Connect va aumentato almeno il numero di build (`+2`, `+3`…).
 - Tutto è pushato su GitHub, CI verde. **Cronologia riscritta il 21 novembre 2026 («step zero»)**: un unico commit iniziale, senza informazioni private (percorsi del computer, dispositivi, dettagli dei certificati), prima di rendere pubblico il repository. Il backup della cronologia precedente resta solo sul computer dell'autore.
 
-## ▶ Prossima sessione: schede e pubblicazione su App Store (iOS e macOS)
+## App Store (iOS e macOS): macOS pubblicata, iOS da verificare
 
 Obiettivo: creare la scheda in App Store Connect con **iOS e macOS insieme** (stesso bundle `it.davidebertolino.dbFlow` = un'unica app, acquisto universale) e arrivare a **TestFlight** e poi alla **revisione**. Android e Windows dopo.
 
@@ -57,7 +58,7 @@ Obiettivo: creare la scheda in App Store Connect con **iOS e macOS insieme** (st
 ### In sospeso, fuori da questo repository
 - **Tema del sito** (repository `tema-davidebertolino-it`, a parte): ramo locale `pagine-intestazione-propria`, commit `358135e`, versione 2.4.0, **non pushato**. Le pagine `.db-pro` (come l'informativa) non mostrano più titolo del tema e barra laterale. Va portato avanti in una sessione aperta su quel repository: push del ramo → CI → merge → tag `v2.4.0` (il tag aggiorna il sito). Il vecchio `starter-didattica` (1.0.0) non va usato.
 
-## ▶ Google Play (avviata il 19 novembre 2026)
+## Google Play: pubblicata (preparata dal 19 novembre 2026)
 
 Obiettivo: scheda in Play Console, **test interno**, poi produzione. Account aziendale: nessun obbligo di test chiuso con 12 tester.
 
@@ -90,7 +91,7 @@ Obiettivo: scheda in Play Console, **test interno**, poi produzione. Account azi
 | M3 Editor (inserimento su "+", dialog, undo/redo, salvataggio automatico, esempi) | ✅ |
 | M4 Esecuzione passo-passo (variabili, console, input, velocità) | ✅ |
 | M5 Codice (pseudocodice, Python, C, Arduino) ed export (PNG, SVG, PDF, `.flow`) | ✅ |
-| M6 Pubblicazione store | ⏳ in corso: licenza, README, informativa, versione 1.0.0, firma Mac, screenshot, testi della scheda e pagina di supporto fatti; restano App Store Connect, build, TestFlight, revisione; Google Play avviata (build, testi, grafica, screenshot pronti) |
+| M6 Pubblicazione store | ✅ Android e macOS pubblicate; repository pubblico (21 novembre 2026). Restano iPhone/iPad (se non ancora uscita) e Windows |
 
 ### Aggiunte oltre la roadmap
 
@@ -262,17 +263,18 @@ xcrun devicectl device install app --device <identificativo> build/ios/iphoneos/
 8. **Idee dalla guida**: sottoprogrammi, array.
 9. **Esercizi, possibili sviluppi**: segnare gli esercizi inclusi già risolti; la traduzione degli esercizi inclusi va rivista insieme alle altre.
 
-## Rendere pubblico il repository (all'uscita sugli store)
+## Repository pubblico (fatto il 21 novembre 2026)
 
 Preparato il 16 novembre 2026:
 - nessun segreto né nel contenuto né nella cronologia (chiavi, `key.properties`, `local.properties` esclusi da git); nessun identificativo personale di dispositivi, nemmeno nella cronologia (riscritta in un unico commit);
 - descrizione, sito (informativa) e argomenti impostati su GitHub; wiki e progetti disattivati;
 - `LICENSE.md`: GitHub la mostra come «Other» (PolyForm non è nel suo elenco), è normale.
 
-Il giorno dell'uscita:
-1. `gh repo edit dadebertolino/db-flow --visibility public --accept-visibility-change-consequences`
-2. Controllare che il link al codice nell'informativa (https://github.com/dadebertolino/db-flow) funzioni.
-3. Facoltativo: protezione del ramo `main` (CI obbligatoria prima del merge).
+Fatto il 21 novembre 2026, dopo lo step zero (cronologia ripartita da un commit ripulito, vecchie esecuzioni della CI cancellate):
+1. ~~Visibilità pubblica~~ (`gh repo edit … --visibility public`).
+2. ~~Link al codice nell'informativa~~: https://github.com/dadebertolino/db-flow risponde.
+3. Da fare: link agli store nella pagina di supporto (`tool/site/db-flow.html`, «In arrivo su App Store» in cinque lingue).
+4. Facoltativo: protezione del ramo `main` (CI obbligatoria prima del merge).
 
 ## Scelte di progetto
 
