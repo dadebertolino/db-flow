@@ -885,7 +885,7 @@ class TrEn extends Tr {
 
   // ================================================================ privacy policy
   @override
-  String get privacyUpdated => 'Last updated: 16 November 2026';
+  String get privacyUpdated => 'Last updated: 21 November 2026';
   @override
   List<(String, List<String>)> privacySections(
     String app,
@@ -950,7 +950,7 @@ class TrEn extends Tr {
     (
       'Deleting data',
       [
-        'You can delete a flowchart from the list on the home screen. If you uninstall the app from iPhone, iPad or Android, the system deletes all the flowcharts saved in it. On the Mac, removing the app from the Applications folder leaves the flowcharts in its data folder (Library › Containers › $app), which you can delete. Copies you have shared or exported elsewhere always remain.',
+        'You can delete a flowchart from the list on the home screen. If you uninstall the app from iPhone, iPad, Android or Windows, the system deletes all the flowcharts saved in it. On the Mac, removing the app from the Applications folder leaves the flowcharts in its data folder (Library › Containers › $app), which you can delete. Copies you have shared or exported elsewhere always remain.',
       ],
     ),
     (

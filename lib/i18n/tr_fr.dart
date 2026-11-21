@@ -900,7 +900,7 @@ class TrFr extends Tr {
 
   // ================================================================ informativa privacy
   @override
-  String get privacyUpdated => 'Dernière mise à jour : 16 novembre 2026';
+  String get privacyUpdated => 'Dernière mise à jour : 21 novembre 2026';
   @override
   List<(String, List<String>)> privacySections(
     String app,
@@ -966,7 +966,7 @@ class TrFr extends Tr {
     (
       'Effacer les données',
       [
-        "Vous pouvez supprimer un organigramme depuis la liste de l'écran d'accueil. Si vous désinstallez l'application sur iPhone, iPad ou Android, le système supprime tous les organigrammes qui y sont enregistrés. Sur Mac, si vous retirez l'application du dossier Applications, les organigrammes restent dans son dossier de données (Bibliothèque › Containers › $app), que vous pouvez supprimer. Les copies que vous avez partagées ou exportées ailleurs restent dans tous les cas.",
+        "Vous pouvez supprimer un organigramme depuis la liste de l'écran d'accueil. Si vous désinstallez l'application sur iPhone, iPad, Android ou Windows, le système supprime tous les organigrammes qui y sont enregistrés. Sur Mac, si vous retirez l'application du dossier Applications, les organigrammes restent dans son dossier de données (Bibliothèque › Containers › $app), que vous pouvez supprimer. Les copies que vous avez partagées ou exportées ailleurs restent dans tous les cas.",
       ],
     ),
     (

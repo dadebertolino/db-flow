@@ -23,10 +23,17 @@ final class StoredFlow {
   final bool isExercise;
 }
 
-/// File `.flow` nella cartella documenti dell'app. Nessun dato lascia il dispositivo.
+/// Cartella dei diagrammi: i Documenti dell'app (su iPhone e iPad visibili
+/// nell'app File; su Mac e Android dentro i dati dell'app). Su Windows i
+/// Documenti sono quelli dell'utente, quindi si usa la cartella dati dell'app
+/// (`AppData\Roaming\Davide Bertolino\DB Flow`), che con il pacchetto MSIX
+/// Windows elimina quando l'app viene disinstallata.
+Future<Directory> defaultFlowBaseDir() =>
+    Platform.isWindows ? getApplicationSupportDirectory() : getApplicationDocumentsDirectory();
+
+/// File `.flow` nella cartella dell'app. Nessun dato lascia il dispositivo.
 class FlowStorage {
-  FlowStorage({Future<Directory> Function()? baseDir})
-    : _baseDir = baseDir ?? getApplicationDocumentsDirectory;
+  FlowStorage({Future<Directory> Function()? baseDir}) : _baseDir = baseDir ?? defaultFlowBaseDir;
 
   final Future<Directory> Function() _baseDir;
 

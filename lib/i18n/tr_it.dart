@@ -889,7 +889,7 @@ class TrIt extends Tr {
 
   // ================================================================ informativa privacy
   @override
-  String get privacyUpdated => 'Ultimo aggiornamento: 16 novembre 2026';
+  String get privacyUpdated => 'Ultimo aggiornamento: 21 novembre 2026';
   @override
   List<(String, List<String>)> privacySections(
     String app,
@@ -954,7 +954,7 @@ class TrIt extends Tr {
     (
       'Cancellare i dati',
       [
-        "Puoi eliminare un diagramma dall'elenco nella schermata iniziale. Disinstallando l'app da iPhone, iPad o Android, il sistema elimina tutti i diagrammi salvati al suo interno. Sul Mac, togliendo l'app dalla cartella Applicazioni i diagrammi restano nella sua cartella dati (Libreria › Containers › $app), che puoi eliminare. Restano comunque le copie che hai condiviso o esportato altrove.",
+        "Puoi eliminare un diagramma dall'elenco nella schermata iniziale. Disinstallando l'app da iPhone, iPad, Android o Windows, il sistema elimina tutti i diagrammi salvati al suo interno. Sul Mac, togliendo l'app dalla cartella Applicazioni i diagrammi restano nella sua cartella dati (Libreria › Containers › $app), che puoi eliminare. Restano comunque le copie che hai condiviso o esportato altrove.",
       ],
     ),
     (

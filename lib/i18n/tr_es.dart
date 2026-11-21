@@ -891,7 +891,7 @@ class TrEs extends Tr {
 
   // ================================================================ informativa privacy
   @override
-  String get privacyUpdated => 'Última actualización: 16 de noviembre de 2026';
+  String get privacyUpdated => 'Última actualización: 21 de noviembre de 2026';
   @override
   List<(String, List<String>)> privacySections(
     String app,
@@ -957,7 +957,7 @@ class TrEs extends Tr {
     (
       'Borrar los datos',
       [
-        'Puedes eliminar un diagrama de la lista en la pantalla de inicio. Al desinstalar la app en iPhone, iPad o Android, el sistema elimina todos los diagramas guardados en ella. En el Mac, si quitas la app de la carpeta Aplicaciones, los diagramas quedan en su carpeta de datos (Biblioteca › Containers › $app), que puedes eliminar. Las copias que hayas compartido o exportado a otro lugar se conservan en cualquier caso.',
+        'Puedes eliminar un diagrama de la lista en la pantalla de inicio. Al desinstalar la app en iPhone, iPad, Android o Windows, el sistema elimina todos los diagramas guardados en ella. En el Mac, si quitas la app de la carpeta Aplicaciones, los diagramas quedan en su carpeta de datos (Biblioteca › Containers › $app), que puedes eliminar. Las copias que hayas compartido o exportado a otro lugar se conservan en cualquier caso.',
       ],
     ),
     (

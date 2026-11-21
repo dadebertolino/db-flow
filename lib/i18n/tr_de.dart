@@ -912,7 +912,7 @@ class TrDe extends Tr {
 
   // ================================================================ informativa privacy
   @override
-  String get privacyUpdated => 'Zuletzt aktualisiert: 16. November 2026';
+  String get privacyUpdated => 'Zuletzt aktualisiert: 21. November 2026';
   @override
   List<(String, List<String>)> privacySections(
     String app,
@@ -978,7 +978,7 @@ class TrDe extends Tr {
     (
       'Daten löschen',
       [
-        'Du kannst ein Diagramm aus der Liste auf dem Startbildschirm löschen. Wenn du die App auf iPhone, iPad oder Android deinstallierst, löscht das System alle darin gespeicherten Diagramme. Auf dem Mac bleiben die Diagramme, wenn du die App aus dem Ordner Programme entfernst, in ihrem Datenordner (Library › Containers › $app); diesen kannst du löschen. Kopien, die du anderswo geteilt oder exportiert hast, bleiben in jedem Fall erhalten.',
+        'Du kannst ein Diagramm aus der Liste auf dem Startbildschirm löschen. Wenn du die App auf iPhone, iPad, Android oder Windows deinstallierst, löscht das System alle darin gespeicherten Diagramme. Auf dem Mac bleiben die Diagramme, wenn du die App aus dem Ordner Programme entfernst, in ihrem Datenordner (Library › Containers › $app); diesen kannst du löschen. Kopien, die du anderswo geteilt oder exportiert hast, bleiben in jedem Fall erhalten.',
       ],
     ),
     (

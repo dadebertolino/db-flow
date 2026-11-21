@@ -20,3 +20,21 @@ jobs:
         with: { path: ~/.arduino15, key: arduino-cli-1.6.0-avr-1.8.8 }
       - run: arduino-cli core update-index && arduino-cli core install arduino:avr@1.8.8
       - run: flutter test
+
+  # Compila l'app Windows e crea il pacchetto MSIX per il Microsoft Store
+  # (Flutter compila per Windows solo su Windows). Il pacchetto si scarica dagli
+  # artefatti dell'esecuzione; lo Store lo firma al caricamento.
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, flutter-version: 3.47.2 }
+      - run: flutter pub get
+      - run: flutter build windows --release
+      - run: dart run msix:create --store --build-windows false
+      - uses: actions/upload-artifact@v4
+        with:
+          name: db-flow-msix
+          path: build/windows/x64/runner/Release/*.msix
+          if-no-files-found: error
