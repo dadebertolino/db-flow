@@ -3,6 +3,8 @@
 Diagrammi di flusso **strutturati ed eseguibili**, per insegnanti e per chi impara a programmare.
 Per iPhone, iPad, Android e Mac. Gratuita, senza pubblicità, senza account, senza raccolta dati.
 
+**Scarica**: [App Store](https://apps.apple.com/app/id6835826427) (iPhone, iPad e Mac) · [Google Play](https://play.google.com/store/apps/details?id=it.davidebertolino.dbflow) (Android) · [sito e supporto](https://www.davidebertolino.it/db-flow/). Windows in arrivo.
+
 ## Cosa fa
 
 - **Diagrammi sempre validi**: si costruisce l'algoritmo inserendo i blocchi sulle frecce; il diagramma si dispone da solo e non può essere "rotto".

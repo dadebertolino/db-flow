@@ -7,7 +7,7 @@ Aggiornato al 21 novembre 2026. Guida di sviluppo originale: [SVILUPPO.md](SVILU
 App Flutter (iOS, iPadOS, Android e macOS) per insegnanti e studenti: diagrammi di flusso strutturati ed eseguibili, generazione di codice, diagrammi Arduino. Offline, nessun account, nessuna raccolta dati.
 
 - **Repository**: https://github.com/dadebertolino/db-flow, **pubblico dal 21 novembre 2026**, branch `main`. CI GitHub Actions verde: deny-list, formattazione, analisi, test.
-- **Pubblicata** (21 novembre 2026): **Google Play** (Android) e **Mac App Store** (macOS). iPhone/iPad: stato da verificare in App Store Connect. Windows: dopo (vedi «Da fare»).
+- **Pubblicata** (21 novembre 2026): **Google Play** (Android) e **Mac App Store** (macOS). anche **iPhone e iPad** (stessa scheda Apple, acquisto universale). Link: App Store https://apps.apple.com/app/id6835826427, Google Play https://play.google.com/store/apps/details?id=it.davidebertolino.dbflow. Windows: dopo (vedi «Da fare»).
 - Essendo pubblico, nel repository non vanno **mai** informazioni private: percorsi del computer, identificativi di dispositivi o simulatori, dettagli dei certificati, password. I commit di questo repository usano `info@davidebertolino.it`.
 - **Flutter 3.47.2 / Dart 3.13.2**, fissati anche in CI (`.github/workflows/ci.yml`). Vanno aggiornati insieme.
 - **arduino-cli 1.6.0 e core `arduino:avr` 1.8.8**, come nell'Arduino IDE del Mac, installati anche in CI: lì i test compilano davvero gli sketch per tutte le schede. Vanno aggiornati insieme.
@@ -15,7 +15,7 @@ App Flutter (iOS, iPadOS, Android e macOS) per insegnanti e studenti: diagrammi 
 - **Versione**: **1.0.0+1** (per l'uscita), definita in `pubspec.yaml` e in `lib/app_info.dart`; un test controlla che coincidano. A ogni nuovo caricamento su App Store Connect va aumentato almeno il numero di build (`+2`, `+3`…).
 - Tutto è pushato su GitHub, CI verde. **Cronologia riscritta il 21 novembre 2026 («step zero»)**: un unico commit iniziale, senza informazioni private (percorsi del computer, dispositivi, dettagli dei certificati), prima di rendere pubblico il repository. Il backup della cronologia precedente resta solo sul computer dell'autore.
 
-## App Store (iOS e macOS): macOS pubblicata, iOS da verificare
+## App Store (iOS e macOS): pubblicata
 
 Obiettivo: creare la scheda in App Store Connect con **iOS e macOS insieme** (stesso bundle `it.davidebertolino.dbFlow` = un'unica app, acquisto universale) e arrivare a **TestFlight** e poi alla **revisione**. Android e Windows dopo.
 
@@ -91,7 +91,7 @@ Obiettivo: scheda in Play Console, **test interno**, poi produzione. Account azi
 | M3 Editor (inserimento su "+", dialog, undo/redo, salvataggio automatico, esempi) | ✅ |
 | M4 Esecuzione passo-passo (variabili, console, input, velocità) | ✅ |
 | M5 Codice (pseudocodice, Python, C, Arduino) ed export (PNG, SVG, PDF, `.flow`) | ✅ |
-| M6 Pubblicazione store | ✅ Android e macOS pubblicate; repository pubblico (21 novembre 2026). Restano iPhone/iPad (se non ancora uscita) e Windows |
+| M6 Pubblicazione store | ✅ iPhone, iPad, Mac e Android pubblicate; repository pubblico (21 novembre 2026). Resta Windows |
 
 ### Aggiunte oltre la roadmap
 
@@ -273,7 +273,7 @@ Preparato il 16 novembre 2026:
 Fatto il 21 novembre 2026, dopo lo step zero (cronologia ripartita da un commit ripulito, vecchie esecuzioni della CI cancellate):
 1. ~~Visibilità pubblica~~ (`gh repo edit … --visibility public`).
 2. ~~Link al codice nell'informativa~~: https://github.com/dadebertolino/db-flow risponde.
-3. Da fare: link agli store nella pagina di supporto (`tool/site/db-flow.html`, «In arrivo su App Store» in cinque lingue).
+3. ~~Link agli store~~ nella pagina di supporto (`tool/site/db-flow.html`, pulsanti App Store e Google Play in cinque lingue) e nel README. **Da ripubblicare sul sito.**
 4. Facoltativo: protezione del ramo `main` (CI obbligatoria prima del merge).
 
 ## Scelte di progetto
