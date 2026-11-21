@@ -11,9 +11,32 @@ App Flutter (iOS, iPadOS, Android e macOS) per insegnanti e studenti: diagrammi 
 - Essendo pubblico, nel repository non vanno **mai** informazioni private: percorsi del computer, identificativi di dispositivi o simulatori, dettagli dei certificati, password. I commit di questo repository usano `info@davidebertolino.it`.
 - **Flutter 3.47.2 / Dart 3.13.2**, fissati anche in CI (`.github/workflows/ci.yml`). Vanno aggiornati insieme.
 - **arduino-cli 1.6.0 e core `arduino:avr` 1.8.8**, come nell'Arduino IDE del Mac, installati anche in CI: lì i test compilano davvero gli sketch per tutte le schede. Vanno aggiornati insieme.
-- **Test**: 474, tutti verdi. Comando: `flutter test`.
+- **Test**: 497, tutti verdi. Comando: `flutter test`.
 - **Versione**: **1.0.0+1** (per l'uscita), definita in `pubspec.yaml` e in `lib/app_info.dart`; un test controlla che coincidano. A ogni nuovo caricamento su App Store Connect va aumentato almeno il numero di build (`+2`, `+3`…).
 - Tutto è pushato su GitHub, CI verde. **Cronologia riscritta il 21 novembre 2026 («step zero»)**: un unico commit iniziale, senza informazioni private (percorsi del computer, dispositivi, dettagli dei certificati), prima di rendere pubblico il repository. Il backup della cronologia precedente resta solo sul computer dell'autore.
+
+## ▶ Windows e Microsoft Store (avviata il 21 novembre 2026)
+
+### Fatto
+- **Piattaforma** `windows/` (21 novembre 2026): titolo «DB Flow», finestra 1200×800 (minima 720×560) come sul Mac, icona del Mac (`windows:` in `flutter_launcher_icons`), dati dell'exe a nome «Davide Bertolino» / «DB Flow».
+- **Diagrammi** nella cartella dati dell'app (`defaultFlowBaseDir()` in `lib/io/storage.dart`: su Windows `getApplicationSupportDirectory`, cioè `AppData\Roaming\Davide Bertolino\DB Flow`), non nei Documenti dell'utente. Con MSIX Windows reindirizza AppData nel pacchetto e la **elimina alla disinstallazione**. Informativa aggiornata (21 novembre 2026, cinque lingue, «… iPhone, iPad, Android o Windows …»): **pagina del sito da ripubblicare** (`tool/privacy/informativa-privacy.html`).
+- **Istanza unica**: `windows/runner/main.cpp` (mutex `Local\DavideBertolino.DBFlow`); con l'app già aperta, il doppio clic su un `.flow` manda il percorso alla finestra esistente (`WM_COPYDATA`, classe `DB_FLOW_WINDOW`), che legge il file e lo passa a Dart sul canale `dbflow/files` (`open`), come Mac e iPhone. Al primo avvio il percorso arriva come argomento (`main(args)`).
+- **Pacchetto MSIX**: `msix` (solo sviluppo, MIT) con `msix_config` in `pubspec.yaml`: identità di Partner Center (`DavideBertolino.DBFlow`, `CN=D690F6A5-53AB-468E-9581-1266A41A362B`, editore «Davide Bertolino»), associazione `.flow`, cinque lingue, nessuna capability oltre a `runFullTrust`. Store ID `9P8H3SD0HM5V`.
+- **CI**: job `windows` (windows-latest) che compila e crea `db_flow.msix`, scaricabile dagli artefatti (`db-flow-msix`). Verificato il manifest: identità, x64, `.flow`, nessun permesso di rete, non firmato (lo firma lo Store).
+- **Testi della scheda** in cinque lingue: [store/microsoft-store.md](store/microsoft-store.md) (descrizione, funzionalità, termini di ricerca, risposte di Partner Center, note per la certificazione); `test/microsoft_store_texts_test.dart`.
+
+### Sul PC Windows (l'utente)
+1. Una volta: Git, **Visual Studio 2022** con «Sviluppo di applicazioni desktop con C++», **Flutter 3.47.2** nel PATH, `flutter doctor` verde.
+2. `git clone https://github.com/dadebertolino/db-flow.git`, `flutter pub get`, `flutter run -d windows`.
+3. Provare: esempi, esecuzione, freccia «←», monospazio (Consolas), «Salva con nome», export PNG/SVG/PDF, tema scuro.
+4. Pacchetto di prova installabile: `dart run msix:create` (certificato di prova). Poi **doppio clic su un `.flow`** ad app chiusa e ad app aperta (deve aprirsi nella stessa finestra); disinstallazione (i diagrammi devono sparire).
+5. **Screenshot** per lo Store (almeno 1366×768, ideale 1920×1080 o 2560×1440), negli stessi 7 soggetti degli altri store.
+
+### In Partner Center (l'utente)
+1. ~~Account aziendale verificato~~, ~~nome «DB Flow» prenotato~~ (21 novembre 2026).
+2. Invio: prezzi e disponibilità, proprietà, classificazione IARC, pacchetto (`db_flow.msix` dalla CI o dal PC), schede in cinque lingue con screenshot, note per la certificazione. Tutto in `store/microsoft-store.md`.
+3. A ogni nuovo invio: `msix_version` più alta in `pubspec.yaml` (ultima cifra sempre 0).
+4. Dopo la pubblicazione: link https://apps.microsoft.com/detail/9P8H3SD0HM5V nella pagina di supporto e nel README.
 
 ## App Store (iOS e macOS): pubblicata
 
@@ -238,9 +261,7 @@ xcrun devicectl device install app --device <identificativo> build/ios/iphoneos/
 
 ## Da fare / idee aperte
 
-0. **Windows**:
-   - **Microsoft Store**: registrazione gratuita (anche per le aziende dal 7 maggio 2026). Account **aziendale** (come Google Play) creato il 17 novembre 2026: email e azienda verificate, **verifica dell'impiego in revisione** (circa 5 giorni lavorativi, avviso per email). Con lo Store il pacchetto MSIX lo firma Microsoft: nessun certificato di firma da comprare.
-   - Aggiungere la piattaforma (`flutter create --platforms=windows .`), compilare sul PC, icona (`windows:` in `flutter_launcher_icons`), installer o MSIX.
+0. **Windows**: vedi la sezione «▶ Windows e Microsoft Store» in cima.
 1. **Revisione delle traduzioni** da parte di insegnanti madrelingua. Le bozze sono state scritte da agenti; i punti dubbi:
    - **EN**: ortografia britannica ("analogue", "Centre").
    - **FR**: "organigramme" o "algorigramme"; `DÉCLARER x : ENTIER`.
