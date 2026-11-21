@@ -1,0 +1,44 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Conto alla rovescia",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi un numero intero n (almeno 1) e scrivi i numeri da n a 1, uno per riga.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "5"
+        ],
+        "out": [
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

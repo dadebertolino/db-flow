@@ -1,0 +1,14 @@
+ALGORITMO Massimo tra due numeri
+INIZIO
+    DICHIARA a COME INTERO
+    DICHIARA b COME INTERO
+    DICHIARA massimo COME INTERO
+    LEGGI a
+    LEGGI b
+    SE a > b ALLORA
+        massimo ← a
+    ALTRIMENTI
+        massimo ← b
+    FINE SE
+    SCRIVI "Il massimo è " & massimo
+FINE

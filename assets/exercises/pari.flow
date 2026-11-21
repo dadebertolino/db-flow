@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Pari o dispari",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi un numero intero e scrivi vero se è pari, falso se è dispari.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "vero"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "falso"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "vero"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-3"
+        ],
+        "out": [
+          "falso"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

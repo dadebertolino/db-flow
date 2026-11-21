@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Fläche des Rechtecks",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies Breite und Höhe eines Rechtecks (Kommazahlen) ein und gib seine Fläche aus. Gib nur das Ergebnis aus.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "12"
+        ]
+      },
+      {
+        "in": [
+          "2.5",
+          "2"
+        ],
+        "out": [
+          "5"
+        ]
+      },
+      {
+        "in": [
+          "0.5",
+          "0.5"
+        ],
+        "out": [
+          "0.25"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "10",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Par o impar",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee un número entero y escribe verdadero si es par, falso si es impar.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "verdadero"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "falso"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "verdadero"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-3"
+        ],
+        "out": [
+          "falso"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

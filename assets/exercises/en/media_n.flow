@@ -1,0 +1,57 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Average of n numbers",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read how many numbers will be entered (n, at least 1), then the n real numbers, and output their average. Output only the result.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "out": [
+          "5"
+        ]
+      },
+      {
+        "in": [
+          "2",
+          "1",
+          "2"
+        ],
+        "out": [
+          "1.5"
+        ]
+      },
+      {
+        "in": [
+          "4",
+          "10",
+          "0",
+          "0",
+          "0"
+        ],
+        "out": [
+          "2.5"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "-7.5"
+        ],
+        "out": [
+          "-7.5"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

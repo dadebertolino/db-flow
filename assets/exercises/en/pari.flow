@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Even or odd",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read an integer and output true if it is even, false if it is odd.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "true"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "false"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "true"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-3"
+        ],
+        "out": [
+          "false"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

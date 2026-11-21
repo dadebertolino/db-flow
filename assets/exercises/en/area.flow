@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Area of a rectangle",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read the width and the height of a rectangle (real numbers) and output its area. Output only the result.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "12"
+        ]
+      },
+      {
+        "in": [
+          "2.5",
+          "2"
+        ],
+        "out": [
+          "5"
+        ]
+      },
+      {
+        "in": [
+          "0.5",
+          "0.5"
+        ],
+        "out": [
+          "0.25"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "10",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

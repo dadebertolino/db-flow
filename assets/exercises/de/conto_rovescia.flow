@@ -1,0 +1,44 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Countdown",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies eine ganze Zahl n (mindestens 1) ein und gib die Zahlen von n bis 1 aus, eine pro Zeile.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "5"
+        ],
+        "out": [
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

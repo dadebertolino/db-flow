@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Suma de dos números",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee dos números enteros y escribe su suma. Escribe solo el resultado.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "7"
+        ]
+      },
+      {
+        "in": [
+          "-2",
+          "5"
+        ],
+        "out": [
+          "3"
+        ]
+      },
+      {
+        "in": [
+          "0",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "100",
+          "-100"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

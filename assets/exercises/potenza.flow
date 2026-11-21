@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Potenza con un ciclo",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi una base b e un esponente e (interi, e ≥ 0) e scrivi b elevato alla e, calcolato con un ciclo di moltiplicazioni. Scrivi solo il risultato.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "2",
+          "3"
+        ],
+        "out": [
+          "8"
+        ]
+      },
+      {
+        "in": [
+          "5",
+          "0"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "81"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2",
+          "3"
+        ],
+        "out": [
+          "-8"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

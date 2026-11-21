@@ -1,0 +1,56 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Positive Zahlen zählen",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies ganze Zahlen ein, bis 0 eingegeben wird, und gib dann aus, wie viele positiv waren (die abschließende 0 zählt nicht). Gib nur das Ergebnis aus.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "5",
+          "-2",
+          "3",
+          "0"
+        ],
+        "out": [
+          "2"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ]
+      },
+      {
+        "in": [
+          "-1",
+          "-2",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        "out": [
+          "4"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

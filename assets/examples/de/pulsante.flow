@@ -1,0 +1,71 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "LED mit Taster schalten",
+  "kind": "arduino",
+  "arduino": {
+    "board": "uno",
+    "baud": 9600,
+    "pins": [
+      {
+        "name": "LED",
+        "pin": "13",
+        "mode": "output",
+        "component": "led"
+      },
+      {
+        "name": "TASTER",
+        "pin": "2",
+        "mode": "inputPullup",
+        "component": "button"
+      }
+    ]
+  },
+  "setup": [
+    {
+      "id": "u0",
+      "t": "comment",
+      "text": "Taster zwischen Pin 2 und GND: gedrückt = LOW"
+    },
+    {
+      "id": "u5",
+      "t": "declare",
+      "name": "zustand",
+      "type": "integer"
+    }
+  ],
+  "body": [
+    {
+      "id": "u6",
+      "t": "digitalRead",
+      "var": "zustand",
+      "pin": "TASTER"
+    },
+    {
+      "id": "u1",
+      "t": "if",
+      "cond": "zustand == LOW",
+      "then": [
+        {
+          "id": "u2",
+          "t": "digitalWrite",
+          "pin": "LED",
+          "value": "HIGH"
+        }
+      ],
+      "else": [
+        {
+          "id": "u3",
+          "t": "digitalWrite",
+          "pin": "LED",
+          "value": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "t": "delay",
+      "ms": "10"
+    }
+  ]
+}

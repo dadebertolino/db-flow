@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Puissance avec une boucle",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez une base b et un exposant e (entiers, e ≥ 0) et affichez b puissance e, calculé avec une boucle de multiplications. Affichez seulement le résultat.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "2",
+          "3"
+        ],
+        "out": [
+          "8"
+        ]
+      },
+      {
+        "in": [
+          "5",
+          "0"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "81"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2",
+          "3"
+        ],
+        "out": [
+          "-8"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Conta i positivi",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi numeri interi finché non viene inserito 0, poi scrivi quanti erano positivi (lo 0 finale non si conta). Scrivi solo il risultato.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "5",
+          "-2",
+          "3",
+          "0"
+        ],
+        "out": [
+          "2"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ]
+      },
+      {
+        "in": [
+          "-1",
+          "-2",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        "out": [
+          "4"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Sum of the first n numbers",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read an integer n (0 or more) and output the sum 1 + 2 + … + n, computed with a loop. Output only the result.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "10"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "100"
+        ],
+        "out": [
+          "5050"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

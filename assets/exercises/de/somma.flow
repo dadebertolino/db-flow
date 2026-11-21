@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Summe zweier Zahlen",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies zwei ganze Zahlen ein und gib ihre Summe aus. Gib nur das Ergebnis aus.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "7"
+        ]
+      },
+      {
+        "in": [
+          "-2",
+          "5"
+        ],
+        "out": [
+          "3"
+        ]
+      },
+      {
+        "in": [
+          "0",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "100",
+          "-100"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

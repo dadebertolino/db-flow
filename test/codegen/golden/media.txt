@@ -1,0 +1,17 @@
+ALGORITMO Media di n numeri
+INIZIO
+    DICHIARA n COME INTERO
+    DICHIARA i COME INTERO
+    DICHIARA x COME REALE
+    DICHIARA somma COME REALE
+    // Chiede n finché non è positivo
+    RIPETI
+        LEGGI n
+    MENTRE n <= 0
+    somma ← 0
+    PER i DA 1 A n ESEGUI
+        LEGGI x
+        somma ← somma + x
+    FINE PER
+    SCRIVI "Media: " & somma / n
+FINE

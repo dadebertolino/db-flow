@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Somme des n premiers nombres",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez un nombre entier n (0 ou plus) et affichez la somme 1 + 2 + … + n, calculée avec une boucle. Affichez seulement le résultat.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "10"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "100"
+        ],
+        "out": [
+          "5050"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

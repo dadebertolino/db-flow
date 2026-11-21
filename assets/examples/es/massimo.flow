@@ -1,0 +1,62 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Máximo de dos números",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "m1",
+      "t": "declare",
+      "name": "a",
+      "type": "integer"
+    },
+    {
+      "id": "m2",
+      "t": "declare",
+      "name": "b",
+      "type": "integer"
+    },
+    {
+      "id": "m3",
+      "t": "declare",
+      "name": "maximo",
+      "type": "integer"
+    },
+    {
+      "id": "m4",
+      "t": "input",
+      "var": "a"
+    },
+    {
+      "id": "m5",
+      "t": "input",
+      "var": "b"
+    },
+    {
+      "id": "m6",
+      "t": "if",
+      "cond": "a > b",
+      "then": [
+        {
+          "id": "m7",
+          "t": "assign",
+          "target": "maximo",
+          "value": "a"
+        }
+      ],
+      "else": [
+        {
+          "id": "m8",
+          "t": "assign",
+          "target": "maximo",
+          "value": "b"
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "t": "output",
+      "value": "\"El máximo es \" & maximo"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+SKETCH LED comandato da un pulsante (Arduino Uno)
+PIN LED = 13 (uscita)
+PIN PULSANTE = 2 (ingresso con pull-up)
+SETUP
+    // Pulsante tra il pin 2 e GND: premuto = LOW
+    DICHIARA stato COME INTERO
+FINE SETUP
+LOOP (ripeti per sempre)
+    stato ← digitalRead(PULSANTE)
+    SE stato == LOW ALLORA
+        digitalWrite(LED, HIGH)
+    ALTRIMENTI
+        digitalWrite(LED, LOW)
+    FINE SE
+    delay(10)
+FINE LOOP

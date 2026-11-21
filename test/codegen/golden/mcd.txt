@@ -1,0 +1,14 @@
+ALGORITMO MCD (algoritmo di Euclide)
+INIZIO
+    DICHIARA a COME INTERO
+    DICHIARA b COME INTERO
+    DICHIARA r COME INTERO
+    LEGGI a
+    LEGGI b
+    MENTRE b != 0 ESEGUI
+        r ← a % b
+        a ← b
+        b ← r
+    FINE MENTRE
+    SCRIVI "MCD = " & a
+FINE

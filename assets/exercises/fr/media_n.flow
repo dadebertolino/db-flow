@@ -1,0 +1,57 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Moyenne de n nombres",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez combien de nombres seront saisis (n, au moins 1), puis les n nombres réels, et affichez leur moyenne. Affichez seulement le résultat.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "out": [
+          "5"
+        ]
+      },
+      {
+        "in": [
+          "2",
+          "1",
+          "2"
+        ],
+        "out": [
+          "1.5"
+        ]
+      },
+      {
+        "in": [
+          "4",
+          "10",
+          "0",
+          "0",
+          "0"
+        ],
+        "out": [
+          "2.5"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "-7.5"
+        ],
+        "out": [
+          "-7.5"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

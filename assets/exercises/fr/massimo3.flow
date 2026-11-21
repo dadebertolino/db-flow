@@ -1,0 +1,66 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Maximum de trois nombres",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez trois nombres entiers et affichez le plus grand. Affichez seulement le résultat.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "9",
+          "5"
+        ],
+        "out": [
+          "9"
+        ]
+      },
+      {
+        "in": [
+          "7",
+          "7",
+          "2"
+        ],
+        "out": [
+          "7"
+        ]
+      },
+      {
+        "in": [
+          "-1",
+          "-5",
+          "-3"
+        ],
+        "out": [
+          "-1"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "2",
+          "8"
+        ],
+        "out": [
+          "8"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0",
+          "0",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Sum of two numbers",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read two integers and output their sum. Output only the result.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "7"
+        ]
+      },
+      {
+        "in": [
+          "-2",
+          "5"
+        ],
+        "out": [
+          "3"
+        ]
+      },
+      {
+        "in": [
+          "0",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "100",
+          "-100"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

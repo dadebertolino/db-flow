@@ -1,0 +1,89 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Primzahl",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "p1",
+      "t": "declare",
+      "name": "n",
+      "type": "integer"
+    },
+    {
+      "id": "p2",
+      "t": "declare",
+      "name": "t",
+      "type": "integer"
+    },
+    {
+      "id": "p3",
+      "t": "declare",
+      "name": "prim",
+      "type": "boolean"
+    },
+    {
+      "id": "p4",
+      "t": "input",
+      "var": "n"
+    },
+    {
+      "id": "p5",
+      "t": "assign",
+      "target": "prim",
+      "value": "n >= 2"
+    },
+    {
+      "id": "p6",
+      "t": "assign",
+      "target": "t",
+      "value": "2"
+    },
+    {
+      "id": "p7",
+      "t": "while",
+      "cond": "t * t <= n and prim",
+      "body": [
+        {
+          "id": "p8",
+          "t": "if",
+          "cond": "n % t == 0",
+          "then": [
+            {
+              "id": "p9",
+              "t": "assign",
+              "target": "prim",
+              "value": "falsch"
+            }
+          ],
+          "else": []
+        },
+        {
+          "id": "p10",
+          "t": "assign",
+          "target": "t",
+          "value": "t + 1"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "t": "if",
+      "cond": "prim",
+      "then": [
+        {
+          "id": "p12",
+          "t": "output",
+          "value": "n & \" ist eine Primzahl\""
+        }
+      ],
+      "else": [
+        {
+          "id": "p13",
+          "t": "output",
+          "value": "n & \" ist keine Primzahl\""
+        }
+      ]
+    }
+  ]
+}

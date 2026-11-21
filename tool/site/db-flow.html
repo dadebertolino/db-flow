@@ -1,0 +1,262 @@
+<!-- wp:html -->
+<style>
+:root {
+  --db-white: #FFFFFF; --db-off-white: #F7F8FA; --db-light-1: #F0F1F3;
+  --db-light-2: #E5E7EB; --db-light-3: #D1D5DB;
+  --db-black: #0A0A0A; --db-dark-1: #111111; --db-dark-2: #1A1A1A;
+  --db-text: #1A1A1A; --db-text-secondary: #4B5563; --db-text-dim: #6B7280;
+  --db-text-bright: #FFFFFF;
+  --db-accent: #2563EB; --db-accent-dim: #1D4ED8; --db-accent-bright: #3B82F6;
+  --db-green: #16A34A; --db-green-bg: #F0FDF4; --db-green-border: #BBF7D0;
+  --db-radius: 4px; --db-radius-lg: 6px;
+}
+.db-pro {
+  --db-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --db-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-family: var(--db-font); color: var(--db-text); font-size: 16px; line-height: 1.65;
+}
+.db-pro .db-hero, .db-pro .db-footer {
+  width: 100vw; position: relative; left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw;
+}
+.db-pro .db-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.db-pro .db-hero { background: var(--db-dark-1); color: var(--db-text-bright); padding: 56px 0 40px; }
+.db-pro .db-label {
+  font-family: var(--db-mono); font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--db-accent-bright);
+}
+.db-pro h1 {
+  font-family: var(--db-font) !important; font-weight: 900; font-size: clamp(28px, 4vw, 44px);
+  color: var(--db-text-bright) !important; background: none !important; margin: 10px 0 6px;
+}
+.db-pro .db-meta { font-size: 13px; font-weight: 500; color: #9CA3AF; margin: 0 0 20px; }
+.db-pro .db-langs { display: flex; flex-wrap: wrap; gap: 8px; }
+.db-pro .db-langs a {
+  font-family: var(--db-mono); font-size: 12px; font-weight: 600; color: var(--db-text-bright);
+  border: 1px solid #383838; border-radius: var(--db-radius); padding: 6px 12px; text-decoration: none;
+}
+.db-pro .db-langs a:hover { border-color: var(--db-accent-bright); }
+.db-pro .db-main { max-width: 860px; margin: 0 auto; padding: 8px 24px 48px; background: var(--db-white); }
+.db-pro .db-lang { padding-top: 32px; border-bottom: 1px solid var(--db-light-2); padding-bottom: 24px; }
+.db-pro .db-lang:last-child { border-bottom: none; }
+.db-pro h2 {
+  font-family: var(--db-font) !important; font-weight: 700; font-size: 24px;
+  color: var(--db-text) !important; background: none !important; margin: 0 0 4px;
+}
+.db-pro h3 {
+  font-family: var(--db-font) !important; font-weight: 600; font-size: 18px;
+  color: var(--db-accent-dim) !important; background: none !important; margin: 24px 0 8px;
+}
+.db-pro p { margin: 0 0 12px; }
+.db-pro .db-updated { font-size: 13px; font-weight: 500; color: var(--db-text-dim); }
+.db-pro .db-summary {
+  background: var(--db-green-bg); border: 1px solid var(--db-green-border);
+  border-radius: var(--db-radius-lg); padding: 16px 20px; margin: 16px 0 8px;
+}
+.db-pro .db-summary p { margin: 0; color: var(--db-text-secondary); }
+.db-pro .db-badges { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 12px; }
+.db-pro .db-badges li {
+  font-family: var(--db-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--db-green); border: 1px solid var(--db-green-border);
+  background: var(--db-white); border-radius: var(--db-radius); padding: 4px 10px;
+}
+.db-pro .db-footer { background: var(--db-black); color: var(--db-text-bright); padding: 32px 0; }
+.db-pro .db-footer p { margin: 0 0 6px; font-size: 14px; }
+.db-pro .db-footer a { color: var(--db-text-bright); }
+.db-pro .db-footer .db-dim { color: #9CA3AF; font-size: 13px; }
+@media (max-width: 640px) {
+  .db-pro .db-hero { padding: 40px 0 28px; }
+  .db-pro .db-main { padding: 0 16px 32px; }
+  .db-pro .db-wrap { padding: 0 16px; }
+  .db-pro h2 { font-size: 21px; }
+}
+.db-pro .db-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 16px 0 8px; }
+.db-pro .db-card {
+  background: var(--db-white); border: 1px solid var(--db-light-2); border-radius: var(--db-radius-lg);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); padding: 14px 16px;
+}
+.db-pro .db-card h3 { margin: 0 0 6px; font-size: 16px; }
+.db-pro .db-card p { margin: 0; font-size: 15px; color: var(--db-text-secondary); }
+.db-pro .db-cta {
+  background: var(--db-off-white); border: 1px solid var(--db-light-2);
+  border-radius: var(--db-radius-lg); padding: 14px 18px; margin: 16px 0;
+}
+.db-pro .db-cta p { margin: 0; }
+.db-pro code { font-family: var(--db-mono); font-size: 14px; font-weight: 500; color: var(--db-accent); }
+@media (max-width: 640px) { .db-pro .db-grid { grid-template-columns: 1fr; } }
+</style>
+<div class="db-pro">
+<section class="db-hero">
+  <div class="db-wrap">
+    <span class="db-label">PROGETTO</span>
+    <h1>DB Flow</h1>
+    <p class="db-meta">Davide Bertolino &middot; Novembre 2026</p>
+    <nav class="db-langs" aria-label="Lingua / Language">
+      <a href="#it" hreflang="it">Italiano</a>
+      <a href="#en" hreflang="en">English</a>
+      <a href="#fr" hreflang="fr">Français</a>
+      <a href="#de" hreflang="de">Deutsch</a>
+      <a href="#es" hreflang="es">Español</a>
+    </nav>
+  </div>
+</section>
+<div class="db-main">
+<section class="db-lang" id="it" lang="it">
+  <h2>DB Flow &middot; diagrammi di flusso eseguibili</h2>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Nessun account</li>
+      <li>Nessuna pubblicità</li>
+      <li>Nessuna raccolta dati</li>
+      <li>Gratuita</li>
+    </ul>
+    <p>DB Flow è un editor di diagrammi di flusso strutturati che si eseguono davvero: si costruisce l'algoritmo a blocchi, lo si segue passo passo e se ne ottiene il codice. È pensata per insegnanti di informatica, tecnologia ed elettronica e per chi impara a programmare.</p>
+  </div>
+  <div class="db-grid">
+    <div class="db-card"><h3>Costruisci</h3><p>Blocchi standard (variabili, input e output, se/altrimenti, cicli while, do-while e for). Si tocca «+» e il diagramma si dispone da solo.</p></div>
+    <div class="db-card"><h3>Esegui</h3><p>Passo passo, con il blocco attivo evidenziato, le variabili, la console e l'inserimento dei dati.</p></div>
+    <div class="db-card"><h3>Genera il codice</h3><p>Pseudocodice, Python e C. Esportazione in PNG, SVG e PDF.</p></div>
+    <div class="db-card"><h3>Arduino</h3><p>Diagrammi setup()/loop(), disegno interattivo di Uno, Nano, Pro Mini, Micro e Mega 2560, simulazione del circuito, sketch .ino.</p></div>
+    <div class="db-card"><h3>Esercizi con verifica</h3><p>L'insegnante prepara consegna e casi di prova; chi risolve verifica il proprio diagramma.</p></div>
+    <div class="db-card"><h3>Ovunque</h3><p>iPhone, iPad e Mac; cinque lingue; tema chiaro e scuro.</p></div>
+  </div>
+  <h3>Dove si trova</h3>
+  <div class="db-cta"><p>In arrivo su App Store per iPhone, iPad e Mac. Seguirà la versione per Android.</p></div>
+  <h3>Supporto</h3>
+  <p>Per domande, segnalazioni di errori o proposte scrivi a <a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a>. Se puoi, indica il dispositivo, la versione dell'app (schermata Informazioni) e allega il file <code>.flow</code> del diagramma che dà problemi.</p>
+  <h3>Domande frequenti</h3>
+  <p><strong>Dove sono salvati i diagrammi?</strong><br>Solo sul dispositivo, nella memoria dell'app. Su iPhone e iPad sono visibili anche nell'app File, nella cartella di DB Flow.</p>
+  <p><strong>Come passo un diagramma a un'altra persona?</strong><br>Dal menu del diagramma: «Condividi file .flow» (AirDrop, Mail, File…); sul Mac «Salva file .flow». Chi lo riceve lo apre con DB Flow e ne ottiene una copia.</p>
+  <p><strong>Come preparo un esercizio?</strong><br>Nel menu di un diagramma: «Crea esercizio». Scrivi la consegna e i casi di prova (l'output atteso si può calcolare dalla tua soluzione), poi «Condividi come esercizio»: il file contiene la consegna, non la soluzione.</p>
+  <h3>Privacy e codice</h3>
+  <p>L'app non usa la rete e non contiene sistemi di analisi o pubblicità. Dettagli nell'<a href="https://www.davidebertolino.it/db-flow-privacy/">informativa sulla privacy</a>. Il codice è pubblico (source-available, licenza PolyForm Noncommercial 1.0.0): chiunque può verificarlo.</p>
+</section>
+<section class="db-lang" id="en" lang="en">
+  <h2>DB Flow &middot; flowcharts you can run</h2>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>No account</li>
+      <li>No ads</li>
+      <li>No data collection</li>
+      <li>Free</li>
+    </ul>
+    <p>DB Flow is an editor for structured flowcharts that really run: build the algorithm from blocks, follow it step by step and get its code. It is designed for computing, technology and electronics teachers and for anyone learning to program.</p>
+  </div>
+  <div class="db-grid">
+    <div class="db-card"><h3>Build</h3><p>Standard blocks (variables, input and output, if/else, while, do-while and for loops). Tap “+” and the flowchart lays itself out.</p></div>
+    <div class="db-card"><h3>Run</h3><p>Step by step, with the active block highlighted, variables, console and input.</p></div>
+    <div class="db-card"><h3>Generate code</h3><p>Pseudocode, Python and C. Export as PNG, SVG and PDF.</p></div>
+    <div class="db-card"><h3>Arduino</h3><p>setup()/loop() flowcharts, interactive drawing of Uno, Nano, Pro Mini, Micro and Mega 2560, circuit simulation, .ino sketch.</p></div>
+    <div class="db-card"><h3>Exercises with checking</h3><p>Teachers prepare the task and test cases; learners check their own flowchart.</p></div>
+    <div class="db-card"><h3>Everywhere</h3><p>iPhone, iPad and Mac; five languages; light and dark themes.</p></div>
+  </div>
+  <h3>Where to get it</h3>
+  <div class="db-cta"><p>Coming soon to the App Store for iPhone, iPad and Mac. An Android version will follow.</p></div>
+  <h3>Support</h3>
+  <p>For questions, bug reports or suggestions write to <a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a>. If you can, include the device, the app version (About screen) and the <code>.flow</code> file of the flowchart that causes the problem.</p>
+  <h3>Frequently asked questions</h3>
+  <p><strong>Where are my flowcharts saved?</strong><br>Only on the device, in the app's storage. On iPhone and iPad they are also visible in the Files app, in the DB Flow folder.</p>
+  <p><strong>How do I give a flowchart to someone else?</strong><br>From the flowchart menu: “Share .flow file” (AirDrop, Mail, Files…); on Mac “Save .flow file”. The recipient opens it with DB Flow and gets a copy.</p>
+  <p><strong>How do I prepare an exercise?</strong><br>In a flowchart's menu: “Create exercise”. Write the task and the test cases (the expected output can be computed from your solution), then “Share as exercise”: the file contains the task, not the solution.</p>
+  <h3>Privacy and code</h3>
+  <p>The app does not use the network and contains no analytics or ads. Details in the <a href="https://www.davidebertolino.it/db-flow-privacy/">privacy policy</a>. The code is public (source-available, PolyForm Noncommercial 1.0.0 licence): anyone can verify it.</p>
+</section>
+<section class="db-lang" id="fr" lang="fr">
+  <h2>DB Flow &middot; organigrammes exécutables</h2>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Sans compte</li>
+      <li>Sans publicité</li>
+      <li>Sans collecte de données</li>
+      <li>Gratuite</li>
+    </ul>
+    <p>DB Flow est un éditeur d'organigrammes structurés qui s'exécutent vraiment : on construit l'algorithme avec des blocs, on le suit pas à pas et on en obtient le code. L'app est pensée pour les enseignants d'informatique, de technologie et d'électronique et pour toute personne qui apprend à programmer.</p>
+  </div>
+  <div class="db-grid">
+    <div class="db-card"><h3>Construire</h3><p>Blocs standard (variables, lecture et écriture, si/sinon, boucles tant que, répéter… tant que et pour). On touche « + » et l'organigramme se dispose tout seul.</p></div>
+    <div class="db-card"><h3>Exécuter</h3><p>Pas à pas, avec le bloc actif mis en évidence, les variables, la console et la saisie.</p></div>
+    <div class="db-card"><h3>Générer le code</h3><p>Pseudo-code, Python et C. Export en PNG, SVG et PDF.</p></div>
+    <div class="db-card"><h3>Arduino</h3><p>Organigrammes setup()/loop(), dessin interactif des cartes Uno, Nano, Pro Mini, Micro et Mega 2560, simulation du circuit, sketch .ino.</p></div>
+    <div class="db-card"><h3>Exercices avec vérification</h3><p>L'enseignant prépare la consigne et les cas de test ; la personne qui résout vérifie son organigramme.</p></div>
+    <div class="db-card"><h3>Partout</h3><p>iPhone, iPad et Mac ; cinq langues ; thème clair et sombre.</p></div>
+  </div>
+  <h3>Où la trouver</h3>
+  <div class="db-cta"><p>Bientôt sur l'App Store pour iPhone, iPad et Mac. Une version Android suivra.</p></div>
+  <h3>Assistance</h3>
+  <p>Pour toute question, signalement d'erreur ou suggestion : <a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a>. Si possible, indiquez l'appareil, la version de l'app (écran Informations) et joignez le fichier <code>.flow</code> de l'organigramme concerné.</p>
+  <h3>Questions fréquentes</h3>
+  <p><strong>Où sont enregistrés les organigrammes ?</strong><br>Uniquement sur l'appareil, dans la mémoire de l'app. Sur iPhone et iPad, ils sont aussi visibles dans l'app Fichiers, dans le dossier de DB Flow.</p>
+  <p><strong>Comment transmettre un organigramme ?</strong><br>Depuis le menu de l'organigramme : « Partager le fichier .flow » (AirDrop, Mail, Fichiers…) ; sur Mac « Enregistrer le fichier .flow ». La personne qui le reçoit l'ouvre avec DB Flow et en obtient une copie.</p>
+  <p><strong>Comment préparer un exercice ?</strong><br>Dans le menu d'un organigramme : « Créer un exercice ». Rédigez la consigne et les cas de test (la sortie attendue peut être calculée à partir de votre solution), puis « Partager comme exercice » : le fichier contient la consigne, pas la solution.</p>
+  <h3>Confidentialité et code</h3>
+  <p>L'app n'utilise pas le réseau et ne contient ni outils d'analyse ni publicité. Détails dans la <a href="https://www.davidebertolino.it/db-flow-privacy/">politique de confidentialité</a>. Le code est public (source-available, licence PolyForm Noncommercial 1.0.0) : chacun peut le vérifier.</p>
+</section>
+<section class="db-lang" id="de" lang="de">
+  <h2>DB Flow &middot; ausführbare Programmablaufpläne</h2>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Kein Konto</li>
+      <li>Keine Werbung</li>
+      <li>Keine Datenerhebung</li>
+      <li>Kostenlos</li>
+    </ul>
+    <p>DB Flow ist ein Editor für strukturierte Programmablaufpläne, die wirklich laufen: Du baust den Algorithmus aus Blöcken, verfolgst ihn Schritt für Schritt und erhältst den Code dazu. Die App richtet sich an Lehrkräfte für Informatik, Technik und Elektronik und an alle, die programmieren lernen.</p>
+  </div>
+  <div class="db-grid">
+    <div class="db-card"><h3>Bauen</h3><p>Standardblöcke (Variablen, Eingabe und Ausgabe, Wenn/Sonst, While-, Do-While- und For-Schleifen). Auf „+“ tippen, der Plan ordnet sich selbst an.</p></div>
+    <div class="db-card"><h3>Ausführen</h3><p>Schritt für Schritt, mit hervorgehobenem aktivem Block, Variablen, Konsole und Eingabe.</p></div>
+    <div class="db-card"><h3>Code erzeugen</h3><p>Pseudocode, Python und C. Export als PNG, SVG und PDF.</p></div>
+    <div class="db-card"><h3>Arduino</h3><p>Pläne mit setup()/loop(), interaktive Zeichnung von Uno, Nano, Pro Mini, Micro und Mega 2560, Schaltungssimulation, .ino-Sketch.</p></div>
+    <div class="db-card"><h3>Aufgaben mit Überprüfung</h3><p>Lehrkräfte bereiten Aufgabenstellung und Testfälle vor; Lernende überprüfen ihren eigenen Plan.</p></div>
+    <div class="db-card"><h3>Überall</h3><p>iPhone, iPad und Mac; fünf Sprachen; helles und dunkles Design.</p></div>
+  </div>
+  <h3>Wo es sie gibt</h3>
+  <div class="db-cta"><p>Demnächst im App Store für iPhone, iPad und Mac. Eine Android-Version folgt.</p></div>
+  <h3>Support</h3>
+  <p>Für Fragen, Fehlermeldungen oder Vorschläge: <a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a>. Wenn möglich, nenne das Gerät und die App-Version (Info-Bildschirm) und hänge die <code>.flow</code>-Datei des betroffenen Plans an.</p>
+  <h3>Häufige Fragen</h3>
+  <p><strong>Wo werden die Pläne gespeichert?</strong><br>Nur auf dem Gerät, im Speicher der App. Auf iPhone und iPad sind sie auch in der Dateien-App im Ordner von DB Flow sichtbar.</p>
+  <p><strong>Wie gebe ich einen Plan weiter?</strong><br>Über das Menü des Plans: „.flow-Datei teilen“ (AirDrop, Mail, Dateien…); auf dem Mac „.flow-Datei speichern“. Wer ihn erhält, öffnet ihn mit DB Flow und bekommt eine Kopie.</p>
+  <p><strong>Wie bereite ich eine Aufgabe vor?</strong><br>Im Menü eines Plans: „Aufgabe erstellen“. Schreibe die Aufgabenstellung und die Testfälle (die erwartete Ausgabe lässt sich aus deiner Lösung berechnen), dann „Als Aufgabe teilen“: Die Datei enthält die Aufgabenstellung, nicht die Lösung.</p>
+  <h3>Datenschutz und Code</h3>
+  <p>Die App nutzt kein Netzwerk und enthält weder Analysewerkzeuge noch Werbung. Einzelheiten in der <a href="https://www.davidebertolino.it/db-flow-privacy/">Datenschutzerklärung</a>. Der Code ist öffentlich (source-available, Lizenz PolyForm Noncommercial 1.0.0): Jeder kann ihn überprüfen.</p>
+</section>
+<section class="db-lang" id="es" lang="es">
+  <h2>DB Flow &middot; diagramas de flujo ejecutables</h2>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Sin cuenta</li>
+      <li>Sin publicidad</li>
+      <li>Sin recogida de datos</li>
+      <li>Gratuita</li>
+    </ul>
+    <p>DB Flow es un editor de diagramas de flujo estructurados que se ejecutan de verdad: construyes el algoritmo con bloques, lo sigues paso a paso y obtienes su código. Está pensada para docentes de informática, tecnología y electrónica y para quien aprende a programar.</p>
+  </div>
+  <div class="db-grid">
+    <div class="db-card"><h3>Construye</h3><p>Bloques estándar (variables, lectura y escritura, si/sino, bucles mientras, repetir… mientras que y para). Tocas «+» y el diagrama se ordena solo.</p></div>
+    <div class="db-card"><h3>Ejecuta</h3><p>Paso a paso, con el bloque activo resaltado, las variables, la consola y la entrada de datos.</p></div>
+    <div class="db-card"><h3>Genera el código</h3><p>Pseudocódigo, Python y C. Exportación en PNG, SVG y PDF.</p></div>
+    <div class="db-card"><h3>Arduino</h3><p>Diagramas setup()/loop(), dibujo interactivo de Uno, Nano, Pro Mini, Micro y Mega 2560, simulación del circuito, sketch .ino.</p></div>
+    <div class="db-card"><h3>Ejercicios con comprobación</h3><p>El docente prepara el enunciado y los casos de prueba; quien lo resuelve comprueba su diagrama.</p></div>
+    <div class="db-card"><h3>En todas partes</h3><p>iPhone, iPad y Mac; cinco idiomas; tema claro y oscuro.</p></div>
+  </div>
+  <h3>Dónde conseguirla</h3>
+  <div class="db-cta"><p>Próximamente en el App Store para iPhone, iPad y Mac. Después llegará la versión para Android.</p></div>
+  <h3>Soporte</h3>
+  <p>Para preguntas, errores o sugerencias escribe a <a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a>. Si puedes, indica el dispositivo, la versión de la app (pantalla Información) y adjunta el archivo <code>.flow</code> del diagrama que da problemas.</p>
+  <h3>Preguntas frecuentes</h3>
+  <p><strong>¿Dónde se guardan los diagramas?</strong><br>Solo en el dispositivo, en la memoria de la app. En iPhone y iPad también se ven en la app Archivos, en la carpeta de DB Flow.</p>
+  <p><strong>¿Cómo paso un diagrama a otra persona?</strong><br>Desde el menú del diagrama: «Compartir archivo .flow» (AirDrop, Mail, Archivos…); en Mac «Guardar archivo .flow». Quien lo recibe lo abre con DB Flow y obtiene una copia.</p>
+  <p><strong>¿Cómo preparo un ejercicio?</strong><br>En el menú de un diagrama: «Crear ejercicio». Escribe el enunciado y los casos de prueba (la salida esperada se puede calcular a partir de tu solución) y luego «Compartir como ejercicio»: el archivo contiene el enunciado, no la solución.</p>
+  <h3>Privacidad y código</h3>
+  <p>La app no usa la red y no contiene herramientas de análisis ni publicidad. Detalles en la <a href="https://www.davidebertolino.it/db-flow-privacy/">política de privacidad</a>. El código es público (source-available, licencia PolyForm Noncommercial 1.0.0): cualquiera puede verificarlo.</p>
+</section>
+</div>
+<footer class="db-footer">
+  <div class="db-wrap">
+    <p><a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a> &middot; <a href="https://www.davidebertolino.it/db-flow-privacy/">Privacy</a> &middot; <a href="https://github.com/dadebertolino/db-flow">https://github.com/dadebertolino/db-flow</a></p>
+    <p class="db-dim">DB Flow &middot; PolyForm Noncommercial 1.0.0</p>
+  </div>
+</footer>
+</div>
+<!-- /wp:html -->

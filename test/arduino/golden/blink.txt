@@ -1,0 +1,10 @@
+SKETCH Blink: LED lampeggiante (Arduino Uno)
+PIN LED = 13 (uscita)
+SETUP
+FINE SETUP
+LOOP (ripeti per sempre)
+    digitalWrite(LED, HIGH)
+    delay(500)
+    digitalWrite(LED, LOW)
+    delay(500)
+FINE LOOP

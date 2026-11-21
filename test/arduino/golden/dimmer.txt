@@ -1,0 +1,14 @@
+SKETCH Dimmer con potenziometro (Arduino Uno)
+PIN POT = A0 (ingresso analogico)
+PIN LED = 9 (uscita)
+SETUP
+    DICHIARA valore COME INTERO
+    DICHIARA luminosita COME INTERO
+FINE SETUP
+LOOP (ripeti per sempre)
+    valore ← analogRead(POT)
+    luminosita ← int(valore / 4)
+    analogWrite(LED, luminosita)
+    SCRIVI "Potenziometro: " & valore & "  LED: " & luminosita
+    delay(100)
+FINE LOOP

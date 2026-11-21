@@ -1,0 +1,66 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "MCD (algoritmo di Euclide)",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "e1",
+      "t": "declare",
+      "name": "a",
+      "type": "integer"
+    },
+    {
+      "id": "e2",
+      "t": "declare",
+      "name": "b",
+      "type": "integer"
+    },
+    {
+      "id": "e3",
+      "t": "declare",
+      "name": "r",
+      "type": "integer"
+    },
+    {
+      "id": "e4",
+      "t": "input",
+      "var": "a"
+    },
+    {
+      "id": "e5",
+      "t": "input",
+      "var": "b"
+    },
+    {
+      "id": "e6",
+      "t": "while",
+      "cond": "b != 0",
+      "body": [
+        {
+          "id": "e7",
+          "t": "assign",
+          "target": "r",
+          "value": "a % b"
+        },
+        {
+          "id": "e8",
+          "t": "assign",
+          "target": "a",
+          "value": "b"
+        },
+        {
+          "id": "e9",
+          "t": "assign",
+          "target": "b",
+          "value": "r"
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "t": "output",
+      "value": "\"MCD = \" & a"
+    }
+  ]
+}

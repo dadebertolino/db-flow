@@ -1,0 +1,71 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "LED controlado por un botón",
+  "kind": "arduino",
+  "arduino": {
+    "board": "uno",
+    "baud": 9600,
+    "pins": [
+      {
+        "name": "LED",
+        "pin": "13",
+        "mode": "output",
+        "component": "led"
+      },
+      {
+        "name": "BOTON",
+        "pin": "2",
+        "mode": "inputPullup",
+        "component": "button"
+      }
+    ]
+  },
+  "setup": [
+    {
+      "id": "u0",
+      "t": "comment",
+      "text": "Botón entre el pin 2 y GND: pulsado = LOW"
+    },
+    {
+      "id": "u5",
+      "t": "declare",
+      "name": "estado",
+      "type": "integer"
+    }
+  ],
+  "body": [
+    {
+      "id": "u6",
+      "t": "digitalRead",
+      "var": "estado",
+      "pin": "BOTON"
+    },
+    {
+      "id": "u1",
+      "t": "if",
+      "cond": "estado == LOW",
+      "then": [
+        {
+          "id": "u2",
+          "t": "digitalWrite",
+          "pin": "LED",
+          "value": "HIGH"
+        }
+      ],
+      "else": [
+        {
+          "id": "u3",
+          "t": "digitalWrite",
+          "pin": "LED",
+          "value": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "t": "delay",
+      "ms": "10"
+    }
+  ]
+}

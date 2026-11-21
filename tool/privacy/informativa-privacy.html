@@ -1,0 +1,293 @@
+<!-- wp:html -->
+<style>
+:root {
+  --db-white: #FFFFFF; --db-off-white: #F7F8FA; --db-light-1: #F0F1F3;
+  --db-light-2: #E5E7EB; --db-light-3: #D1D5DB;
+  --db-black: #0A0A0A; --db-dark-1: #111111; --db-dark-2: #1A1A1A;
+  --db-text: #1A1A1A; --db-text-secondary: #4B5563; --db-text-dim: #6B7280;
+  --db-text-bright: #FFFFFF;
+  --db-accent: #2563EB; --db-accent-dim: #1D4ED8; --db-accent-bright: #3B82F6;
+  --db-green: #16A34A; --db-green-bg: #F0FDF4; --db-green-border: #BBF7D0;
+  --db-radius: 4px; --db-radius-lg: 6px;
+}
+.db-pro {
+  --db-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --db-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-family: var(--db-font); color: var(--db-text); font-size: 16px; line-height: 1.65;
+}
+.db-pro .db-hero, .db-pro .db-footer {
+  width: 100vw; position: relative; left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw;
+}
+.db-pro .db-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.db-pro .db-hero { background: var(--db-dark-1); color: var(--db-text-bright); padding: 56px 0 40px; }
+.db-pro .db-label {
+  font-family: var(--db-mono); font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--db-accent-bright);
+}
+.db-pro h1 {
+  font-family: var(--db-font) !important; font-weight: 900; font-size: clamp(28px, 4vw, 44px);
+  color: var(--db-text-bright) !important; background: none !important; margin: 10px 0 6px;
+}
+.db-pro .db-meta { font-size: 13px; font-weight: 500; color: #9CA3AF; margin: 0 0 20px; }
+.db-pro .db-langs { display: flex; flex-wrap: wrap; gap: 8px; }
+.db-pro .db-langs a {
+  font-family: var(--db-mono); font-size: 12px; font-weight: 600; color: var(--db-text-bright);
+  border: 1px solid #383838; border-radius: var(--db-radius); padding: 6px 12px; text-decoration: none;
+}
+.db-pro .db-langs a:hover { border-color: var(--db-accent-bright); }
+.db-pro .db-main { max-width: 860px; margin: 0 auto; padding: 8px 24px 48px; background: var(--db-white); }
+.db-pro .db-lang { padding-top: 32px; border-bottom: 1px solid var(--db-light-2); padding-bottom: 24px; }
+.db-pro .db-lang:last-child { border-bottom: none; }
+.db-pro h2 {
+  font-family: var(--db-font) !important; font-weight: 700; font-size: 24px;
+  color: var(--db-text) !important; background: none !important; margin: 0 0 4px;
+}
+.db-pro h3 {
+  font-family: var(--db-font) !important; font-weight: 600; font-size: 18px;
+  color: var(--db-accent-dim) !important; background: none !important; margin: 24px 0 8px;
+}
+.db-pro p { margin: 0 0 12px; }
+.db-pro .db-updated { font-size: 13px; font-weight: 500; color: var(--db-text-dim); }
+.db-pro .db-summary {
+  background: var(--db-green-bg); border: 1px solid var(--db-green-border);
+  border-radius: var(--db-radius-lg); padding: 16px 20px; margin: 16px 0 8px;
+}
+.db-pro .db-summary p { margin: 0; color: var(--db-text-secondary); }
+.db-pro .db-badges { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 12px; }
+.db-pro .db-badges li {
+  font-family: var(--db-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--db-green); border: 1px solid var(--db-green-border);
+  background: var(--db-white); border-radius: var(--db-radius); padding: 4px 10px;
+}
+.db-pro .db-footer { background: var(--db-black); color: var(--db-text-bright); padding: 32px 0; }
+.db-pro .db-footer p { margin: 0 0 6px; font-size: 14px; }
+.db-pro .db-footer a { color: var(--db-text-bright); }
+.db-pro .db-footer .db-dim { color: #9CA3AF; font-size: 13px; }
+@media (max-width: 640px) {
+  .db-pro .db-hero { padding: 40px 0 28px; }
+  .db-pro .db-main { padding: 0 16px 32px; }
+  .db-pro .db-wrap { padding: 0 16px; }
+  .db-pro h2 { font-size: 21px; }
+}
+</style>
+<div class="db-pro">
+<section class="db-hero">
+  <div class="db-wrap">
+    <span class="db-label">INFORMATIVA PRIVACY</span>
+    <h1>DB Flow</h1>
+    <p class="db-meta">Davide Bertolino &middot; Novembre 2026</p>
+    <nav class="db-langs" aria-label="Lingua / Language">
+      <a href="#it" hreflang="it">Italiano</a>
+      <a href="#en" hreflang="en">English</a>
+      <a href="#fr" hreflang="fr">Français</a>
+      <a href="#de" hreflang="de">Deutsch</a>
+      <a href="#es" hreflang="es">Español</a>
+    </nav>
+  </div>
+</section>
+<div class="db-main">
+<section class="db-lang" id="it" lang="it">
+  <h2>Informativa sulla privacy &middot; DB Flow</h2>
+  <p class="db-updated">Ultimo aggiornamento: 16 novembre 2026</p>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Nessun account</li>
+      <li>Nessuna pubblicità</li>
+      <li>Nessuna raccolta dati</li>
+      <li>I diagrammi restano sul dispositivo</li>
+    </ul>
+    <p>L'app non contiene sistemi di analisi, pubblicità o segnalazione degli errori e non usa internet. I file si condividono direttamente tra persone (AirDrop, Mail, File…).</p>
+  </div>
+  <h3>In breve</h3>
+  <p>DB Flow non raccoglie, non trasmette e non vende dati personali.</p>
+  <p>Non serve un account e non c'è alcuna registrazione.</p>
+  <p>L'app non contiene pubblicità.</p>
+  <p>I diagrammi restano sul tuo dispositivo.</p>
+  <h3>Chi è il responsabile</h3>
+  <p>DB Flow è realizzata dal Prof. Davide Bertolino. Poiché l'app non raccoglie dati personali, nessun dato dell'utente arriva allo sviluppatore.</p>
+  <h3>Quali dati usa l'app</h3>
+  <p>Solo i diagrammi che crei, salvati nella memoria dell'app sul dispositivo, e la scelta del tema (chiaro o scuro). Su iPhone e iPad i diagrammi sono visibili anche nell'app File, nella cartella di DB Flow.</p>
+  <p>L'app non usa nomi, email, posizione, foto, contatti, microfono, fotocamera, identificativi del dispositivo o pubblicitari.</p>
+  <p>Se il backup del dispositivo è attivo (iCloud, Google o Time Machine sul Mac), il sistema operativo può includere i diagrammi nel backup, come per i documenti di ogni altra app. È un servizio del sistema, gestito dalle impostazioni del dispositivo.</p>
+  <h3>Connessione a internet</h3>
+  <p>L'app funziona senza connessione e non invia nulla in rete: nessun server, nessun servizio esterno.</p>
+  <h3>Servizi di terze parti</h3>
+  <p>Nessun sistema di analisi o statistiche, di pubblicità o di segnalazione automatica degli errori. I componenti usati per costruire l'app sono elencati in «Licenze dei componenti usati».</p>
+  <h3>Condivisione dei file</h3>
+  <p>Un diagramma, un'immagine, un PDF o il codice escono dall'app solo quando scegli tu «Condividi», «Esporta» o, sul computer, «Salva con nome…». Decidi tu a chi o dove inviarlo (AirDrop, Mail, File…) o in quale cartella salvarlo. Da quel momento valgono le regole dell'app o del servizio che hai scelto.</p>
+  <p>Un file .flow ricevuto si apre con «Apri un file .flow» oppure toccandolo in Mail, File o Finder: l'app legge solo quel file e ne salva una copia tra i tuoi diagrammi.</p>
+  <h3>A scuola</h3>
+  <p>L'app è pensata per insegnanti e studenti e non chiede dati personali. Consiglio: nei nomi dei diagrammi e nei testi non inserire dati personali (ad esempio nomi e cognomi degli studenti), soprattutto se i file vengono condivisi.</p>
+  <h3>Cancellare i dati</h3>
+  <p>Puoi eliminare un diagramma dall'elenco nella schermata iniziale. Disinstallando l'app da iPhone, iPad o Android, il sistema elimina tutti i diagrammi salvati al suo interno. Sul Mac, togliendo l'app dalla cartella Applicazioni i diagrammi restano nella sua cartella dati (Libreria › Containers › DB Flow), che puoi eliminare. Restano comunque le copie che hai condiviso o esportato altrove.</p>
+  <h3>Verificabilità</h3>
+  <p>Il codice di DB Flow è pubblico (source-available, licenza PolyForm Noncommercial 1.0.0): chiunque può verificare che l'app si comporti come descritto qui.</p>
+  <h3>Modifiche e contatti</h3>
+  <p>Se l'informativa cambia, la nuova versione sarà in questa pagina con la data aggiornata. Per domande: info@davidebertolino.it.</p>
+</section>
+<section class="db-lang" id="en" lang="en">
+  <h2>Privacy policy &middot; DB Flow</h2>
+  <p class="db-updated">Last updated: 16 November 2026</p>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>No account</li>
+      <li>No ads</li>
+      <li>No data collection</li>
+      <li>Flowcharts stay on the device</li>
+    </ul>
+    <p>The app contains no analytics, advertising or error reporting, and does not use the internet. Files are shared directly between people (AirDrop, Mail, Files…).</p>
+  </div>
+  <h3>In brief</h3>
+  <p>DB Flow does not collect, transmit or sell personal data.</p>
+  <p>No account is needed and there is no registration.</p>
+  <p>The app contains no advertising.</p>
+  <p>Your flowcharts stay on your device.</p>
+  <h3>Who is responsible</h3>
+  <p>DB Flow is made by Prof. Davide Bertolino. Since the app does not collect personal data, no user data reaches the developer.</p>
+  <h3>What data the app uses</h3>
+  <p>Only the flowcharts you create, saved in the app’s storage on the device, and your theme choice (light or dark). On iPhone and iPad the flowcharts are also visible in the Files app, in the DB Flow folder.</p>
+  <p>The app does not use names, email addresses, location, photos, contacts, microphone, camera, device identifiers or advertising identifiers.</p>
+  <p>If device backup is turned on (iCloud, Google or Time Machine on the Mac), the operating system may include the flowcharts in the backup, as with any other app’s documents. This is a system service, managed in the device settings.</p>
+  <h3>Internet connection</h3>
+  <p>The app works offline and sends nothing over the network: no servers, no external services.</p>
+  <h3>Third-party services</h3>
+  <p>No analytics or statistics, no advertising and no automatic error reporting. The components used to build the app are listed in «Licences of the components used».</p>
+  <h3>Sharing files</h3>
+  <p>A flowchart, an image, a PDF or the code leaves the app only when you choose «Share», «Export» or, on a computer, «Save as…». You decide who to send it to or where (AirDrop, Mail, Files…) or which folder to save it in. From then on, the rules of the app or service you chose apply.</p>
+  <p>A .flow file you receive opens with «Open a .flow file» or by tapping it in Mail, Files or Finder: the app reads only that file and saves a copy among your flowcharts.</p>
+  <h3>At school</h3>
+  <p>The app is designed for teachers and students and does not ask for personal data. Tip: do not put personal data (for example students’ first names and surnames) in flowchart names or texts, especially if the files are shared.</p>
+  <h3>Deleting data</h3>
+  <p>You can delete a flowchart from the list on the home screen. If you uninstall the app from iPhone, iPad or Android, the system deletes all the flowcharts saved in it. On the Mac, removing the app from the Applications folder leaves the flowcharts in its data folder (Library › Containers › DB Flow), which you can delete. Copies you have shared or exported elsewhere always remain.</p>
+  <h3>Verifiability</h3>
+  <p>The code of DB Flow is public (source-available, PolyForm Noncommercial 1.0.0 licence): anyone can check that the app behaves as described here.</p>
+  <h3>Changes and contacts</h3>
+  <p>If this policy changes, the new version will be on this page with the updated date. For questions: info@davidebertolino.it.</p>
+</section>
+<section class="db-lang" id="fr" lang="fr">
+  <h2>Politique de confidentialité &middot; DB Flow</h2>
+  <p class="db-updated">Dernière mise à jour : 16 novembre 2026</p>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Aucun compte</li>
+      <li>Aucune publicité</li>
+      <li>Aucune collecte de données</li>
+      <li>Les organigrammes restent sur l'appareil</li>
+    </ul>
+    <p>L'application ne contient aucun outil d'analyse, de publicité ou de signalement des erreurs et n'utilise pas internet. Les fichiers se partagent directement entre personnes (AirDrop, Mail, Fichiers…).</p>
+  </div>
+  <h3>En bref</h3>
+  <p>DB Flow ne collecte, ne transmet et ne vend aucune donnée personnelle.</p>
+  <p>Aucun compte n'est nécessaire et il n'y a aucune inscription.</p>
+  <p>L'application ne contient pas de publicité.</p>
+  <p>Les organigrammes restent sur votre appareil.</p>
+  <h3>Qui est responsable</h3>
+  <p>DB Flow est réalisée par le Prof. Davide Bertolino. Comme l'application ne collecte aucune donnée personnelle, aucune donnée de l'utilisateur ne parvient au développeur.</p>
+  <h3>Données utilisées par l'application</h3>
+  <p>Uniquement les organigrammes que vous créez, enregistrés dans la mémoire de l'application sur l'appareil, et le choix du thème (clair ou sombre). Sur iPhone et iPad, les organigrammes sont aussi visibles dans l'app Fichiers, dans le dossier de DB Flow.</p>
+  <p>L'application n'utilise ni noms, ni e-mails, ni position, ni photos, ni contacts, ni microphone, ni appareil photo, ni identifiants de l'appareil ou publicitaires.</p>
+  <p>Si la sauvegarde de l'appareil est activée (iCloud, Google ou Time Machine sur Mac), le système d'exploitation peut inclure les organigrammes dans la sauvegarde, comme les documents de toute autre application. C'est un service du système, géré dans les réglages de l'appareil.</p>
+  <h3>Connexion à internet</h3>
+  <p>L'application fonctionne sans connexion et n'envoie rien sur le réseau : aucun serveur, aucun service externe.</p>
+  <h3>Services tiers</h3>
+  <p>Aucun outil d'analyse ou de statistiques, de publicité ou de signalement automatique des erreurs. Les composants utilisés pour construire l'application sont listés dans « Licences des composants utilisés ».</p>
+  <h3>Partage des fichiers</h3>
+  <p>Un organigramme, une image, un PDF ou le code ne sortent de l'application que lorsque vous choisissez « Partager », « Exporter » ou, sur ordinateur, « Enregistrer sous… ». Vous décidez à qui ou où l'envoyer (AirDrop, Mail, Fichiers…) ou dans quel dossier l'enregistrer. À partir de ce moment, ce sont les règles de l'application ou du service choisi qui s'appliquent.</p>
+  <p>Un fichier .flow reçu s'ouvre avec « Ouvrir un fichier .flow » ou en le touchant dans Mail, Fichiers ou le Finder : l'application ne lit que ce fichier et en enregistre une copie parmi vos organigrammes.</p>
+  <h3>À l'école</h3>
+  <p>L'application est conçue pour les enseignants et les élèves et ne demande aucune donnée personnelle. Conseil : n'insérez pas de données personnelles dans les noms des organigrammes et dans les textes (par exemple les noms et prénoms des élèves), surtout si les fichiers sont partagés.</p>
+  <h3>Effacer les données</h3>
+  <p>Vous pouvez supprimer un organigramme depuis la liste de l'écran d'accueil. Si vous désinstallez l'application sur iPhone, iPad ou Android, le système supprime tous les organigrammes qui y sont enregistrés. Sur Mac, si vous retirez l'application du dossier Applications, les organigrammes restent dans son dossier de données (Bibliothèque › Containers › DB Flow), que vous pouvez supprimer. Les copies que vous avez partagées ou exportées ailleurs restent dans tous les cas.</p>
+  <h3>Vérifiabilité</h3>
+  <p>Le code de DB Flow est public (source-available, licence PolyForm Noncommercial 1.0.0) : chacun peut vérifier que l'application se comporte comme décrit ici.</p>
+  <h3>Modifications et contacts</h3>
+  <p>Si cette politique change, la nouvelle version figurera sur cette page avec la date mise à jour. Pour toute question : info@davidebertolino.it.</p>
+</section>
+<section class="db-lang" id="de" lang="de">
+  <h2>Datenschutzerklärung &middot; DB Flow</h2>
+  <p class="db-updated">Zuletzt aktualisiert: 16. November 2026</p>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Kein Konto</li>
+      <li>Keine Werbung</li>
+      <li>Keine Datenerhebung</li>
+      <li>Die Diagramme bleiben auf dem Gerät</li>
+    </ul>
+    <p>Die App enthält keine Analyse-, Werbe- oder Fehlerberichtssysteme und nutzt kein Internet. Dateien werden direkt zwischen Personen geteilt (AirDrop, Mail, Dateien …).</p>
+  </div>
+  <h3>Kurz gesagt</h3>
+  <p>DB Flow erhebt, überträgt und verkauft keine personenbezogenen Daten.</p>
+  <p>Es ist kein Konto nötig und es gibt keine Registrierung.</p>
+  <p>Die App enthält keine Werbung.</p>
+  <p>Die Diagramme bleiben auf deinem Gerät.</p>
+  <h3>Verantwortlich</h3>
+  <p>DB Flow wird von Prof. Davide Bertolino entwickelt. Da die App keine personenbezogenen Daten erhebt, gelangen keine Daten der Nutzer zum Entwickler.</p>
+  <h3>Welche Daten die App verwendet</h3>
+  <p>Nur die Diagramme, die du erstellst, gespeichert im Speicher der App auf dem Gerät, und die Wahl des Designs (hell oder dunkel). Auf iPhone und iPad sind die Diagramme auch in der App Dateien sichtbar, im Ordner von DB Flow.</p>
+  <p>Die App verwendet keine Namen, E-Mail-Adressen, Standortdaten, Fotos, Kontakte, Mikrofon, Kamera, Geräte- oder Werbekennungen.</p>
+  <p>Wenn die Gerätesicherung aktiv ist (iCloud, Google oder Time Machine auf dem Mac), kann das Betriebssystem die Diagramme in die Sicherung aufnehmen, wie die Dokumente jeder anderen App. Das ist ein Dienst des Systems, gesteuert über die Einstellungen des Geräts.</p>
+  <h3>Internetverbindung</h3>
+  <p>Die App funktioniert ohne Verbindung und sendet nichts ins Netz: kein Server, kein externer Dienst.</p>
+  <h3>Dienste von Drittanbietern</h3>
+  <p>Keine Analyse- oder Statistiksysteme, keine Werbung und keine automatischen Fehlerberichte. Die Komponenten, mit denen die App gebaut ist, stehen unter »Lizenzen der verwendeten Komponenten«.</p>
+  <h3>Teilen von Dateien</h3>
+  <p>Ein Diagramm, ein Bild, ein PDF oder der Code verlassen die App nur, wenn du selbst »Teilen«, »Exportieren« oder am Computer »Speichern unter…« wählst. Du entscheidest, an wen oder wohin du es sendest (AirDrop, Mail, Dateien …) oder in welchem Ordner du es speicherst. Ab dann gelten die Regeln der App oder des Dienstes, den du gewählt hast.</p>
+  <p>Eine empfangene .flow-Datei öffnest du mit ».flow-Datei öffnen« oder durch Tippen in Mail, Dateien oder im Finder: Die App liest nur diese Datei und speichert eine Kopie bei deinen Diagrammen.</p>
+  <h3>In der Schule</h3>
+  <p>Die App ist für Lehrkräfte und Lernende gedacht und fragt keine personenbezogenen Daten ab. Tipp: Gib in Diagrammnamen und Texten keine personenbezogenen Daten ein (zum Beispiel Vor- und Nachnamen von Schülerinnen und Schülern), besonders wenn die Dateien geteilt werden.</p>
+  <h3>Daten löschen</h3>
+  <p>Du kannst ein Diagramm aus der Liste auf dem Startbildschirm löschen. Wenn du die App auf iPhone, iPad oder Android deinstallierst, löscht das System alle darin gespeicherten Diagramme. Auf dem Mac bleiben die Diagramme, wenn du die App aus dem Ordner Programme entfernst, in ihrem Datenordner (Library › Containers › DB Flow); diesen kannst du löschen. Kopien, die du anderswo geteilt oder exportiert hast, bleiben in jedem Fall erhalten.</p>
+  <h3>Überprüfbarkeit</h3>
+  <p>Der Code von DB Flow ist öffentlich (source-available, Lizenz PolyForm Noncommercial 1.0.0): Jeder kann überprüfen, dass sich die App so verhält, wie hier beschrieben.</p>
+  <h3>Änderungen und Kontakt</h3>
+  <p>Wenn sich diese Datenschutzerklärung ändert, steht die neue Version mit aktualisiertem Datum auf dieser Seite. Bei Fragen: info@davidebertolino.it.</p>
+</section>
+<section class="db-lang" id="es" lang="es">
+  <h2>Política de privacidad &middot; DB Flow</h2>
+  <p class="db-updated">Última actualización: 16 de noviembre de 2026</p>
+  <div class="db-summary">
+    <ul class="db-badges">
+      <li>Sin cuenta</li>
+      <li>Sin publicidad</li>
+      <li>Sin recopilación de datos</li>
+      <li>Los diagramas se quedan en el dispositivo</li>
+    </ul>
+    <p>La app no contiene sistemas de análisis, publicidad ni informes de errores, y no usa internet. Los archivos se comparten directamente entre personas (AirDrop, Mail, Archivos…).</p>
+  </div>
+  <h3>En resumen</h3>
+  <p>DB Flow no recopila, no transmite y no vende datos personales.</p>
+  <p>No se necesita una cuenta ni hay ningún registro.</p>
+  <p>La app no contiene publicidad.</p>
+  <p>Los diagramas se quedan en tu dispositivo.</p>
+  <h3>Quién es el responsable</h3>
+  <p>DB Flow ha sido realizada por el Prof. Davide Bertolino. Como la app no recopila datos personales, ningún dato del usuario llega al desarrollador.</p>
+  <h3>Qué datos usa la app</h3>
+  <p>Solo los diagramas que creas, guardados en la memoria de la app en el dispositivo, y la elección del tema (claro u oscuro). En iPhone y iPad los diagramas también se ven en la app Archivos, en la carpeta de DB Flow.</p>
+  <p>La app no usa nombres, correos electrónicos, ubicación, fotos, contactos, micrófono, cámara, identificadores del dispositivo ni identificadores publicitarios.</p>
+  <p>Si la copia de seguridad del dispositivo está activada (iCloud, Google o Time Machine en el Mac), el sistema operativo puede incluir los diagramas en ella, como los documentos de cualquier otra app. Es un servicio del sistema, gestionado desde los ajustes del dispositivo.</p>
+  <h3>Conexión a internet</h3>
+  <p>La app funciona sin conexión y no envía nada por la red: ningún servidor, ningún servicio externo.</p>
+  <h3>Servicios de terceros</h3>
+  <p>Ningún sistema de análisis o estadísticas, de publicidad ni de informe automático de errores. Los componentes utilizados para crear la app se enumeran en «Licencias de los componentes utilizados».</p>
+  <h3>Compartir archivos</h3>
+  <p>Un diagrama, una imagen, un PDF o el código salen de la app solo cuando tú eliges «Compartir», «Exportar» o, en el ordenador, «Guardar como…». Tú decides a quién o adónde enviarlo (AirDrop, Mail, Archivos…) o en qué carpeta guardarlo. A partir de ese momento se aplican las reglas de la app o del servicio que elegiste.</p>
+  <p>Un archivo .flow recibido se abre con «Abrir un archivo .flow» o tocándolo en Mail, Archivos o el Finder: la app lee solo ese archivo y guarda una copia entre tus diagramas.</p>
+  <h3>En la escuela</h3>
+  <p>La app está pensada para docentes y estudiantes y no pide datos personales. Consejo: no escribas datos personales en los nombres de los diagramas ni en los textos (por ejemplo, nombres y apellidos de los estudiantes), sobre todo si los archivos se comparten.</p>
+  <h3>Borrar los datos</h3>
+  <p>Puedes eliminar un diagrama de la lista en la pantalla de inicio. Al desinstalar la app en iPhone, iPad o Android, el sistema elimina todos los diagramas guardados en ella. En el Mac, si quitas la app de la carpeta Aplicaciones, los diagramas quedan en su carpeta de datos (Biblioteca › Containers › DB Flow), que puedes eliminar. Las copias que hayas compartido o exportado a otro lugar se conservan en cualquier caso.</p>
+  <h3>Verificabilidad</h3>
+  <p>El código de DB Flow es público (source-available, licencia PolyForm Noncommercial 1.0.0): cualquiera puede verificar que la app se comporta como se describe aquí.</p>
+  <h3>Cambios y contacto</h3>
+  <p>Si la política cambia, la nueva versión estará en esta página con la fecha actualizada. Para preguntas: info@davidebertolino.it.</p>
+</section>
+</div>
+<footer class="db-footer">
+  <div class="db-wrap">
+    <p><a href="mailto:info@davidebertolino.it">info@davidebertolino.it</a> &middot; <a href="https://github.com/dadebertolino/db-flow">https://github.com/dadebertolino/db-flow</a></p>
+    <p class="db-dim">DB Flow &middot; PolyForm Noncommercial 1.0.0</p>
+  </div>
+</footer>
+</div>
+<!-- /wp:html -->

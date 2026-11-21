@@ -1,0 +1,44 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Compte à rebours",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez un nombre entier n (au moins 1) et affichez les nombres de n à 1, un par ligne.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "5"
+        ],
+        "out": [
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

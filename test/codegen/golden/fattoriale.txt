@@ -1,0 +1,12 @@
+ALGORITMO Fattoriale
+INIZIO
+    DICHIARA n COME INTERO
+    DICHIARA i COME INTERO
+    DICHIARA f COME INTERO
+    LEGGI n
+    f ← 1
+    PER i DA 2 A n ESEGUI
+        f ← f * i
+    FINE PER
+    SCRIVI n & "! = " & f
+FINE

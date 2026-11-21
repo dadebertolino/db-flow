@@ -1,0 +1,10 @@
+ALGORITMO Tabelline
+INIZIO
+    DICHIARA i COME INTERO
+    DICHIARA j COME INTERO
+    PER i DA 1 A 10 ESEGUI
+        PER j DA 1 A 10 ESEGUI
+            SCRIVI i & " x " & j & " = " & i * j
+        FINE PER
+    FINE PER
+FINE

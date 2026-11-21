@@ -1,0 +1,66 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Dix premiers multiples",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez un nombre entier n et affichez ses dix premiers multiples (n, 2n, … 10n), un par ligne.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "6",
+          "9",
+          "12",
+          "15",
+          "18",
+          "21",
+          "24",
+          "27",
+          "30"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "7",
+          "14",
+          "21",
+          "28",
+          "35",
+          "42",
+          "49",
+          "56",
+          "63",
+          "70"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2"
+        ],
+        "out": [
+          "-2",
+          "-4",
+          "-6",
+          "-8",
+          "-10",
+          "-12",
+          "-14",
+          "-16",
+          "-18",
+          "-20"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

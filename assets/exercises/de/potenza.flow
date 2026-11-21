@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Potenz mit einer Schleife",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies eine Basis b und einen Exponenten e ein (ganze Zahlen, e ≥ 0) und gib b hoch e aus, berechnet mit einer Schleife aus Multiplikationen. Gib nur das Ergebnis aus.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "2",
+          "3"
+        ],
+        "out": [
+          "8"
+        ]
+      },
+      {
+        "in": [
+          "5",
+          "0"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "81"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2",
+          "3"
+        ],
+        "out": [
+          "-8"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

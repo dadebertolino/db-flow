@@ -1,0 +1,45 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Tablas de multiplicar",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "t1",
+      "t": "declare",
+      "name": "i",
+      "type": "integer"
+    },
+    {
+      "id": "t2",
+      "t": "declare",
+      "name": "j",
+      "type": "integer"
+    },
+    {
+      "id": "t3",
+      "t": "for",
+      "var": "i",
+      "from": "1",
+      "to": "10",
+      "step": "1",
+      "body": [
+        {
+          "id": "t4",
+          "t": "for",
+          "var": "j",
+          "from": "1",
+          "to": "10",
+          "step": "1",
+          "body": [
+            {
+              "id": "t5",
+              "t": "output",
+              "value": "i & \" x \" & j & \" = \" & i * j"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

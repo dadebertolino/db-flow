@@ -1,0 +1,81 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Media di n numeri",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "d1",
+      "t": "declare",
+      "name": "n",
+      "type": "integer"
+    },
+    {
+      "id": "d2",
+      "t": "declare",
+      "name": "i",
+      "type": "integer"
+    },
+    {
+      "id": "d3",
+      "t": "declare",
+      "name": "x",
+      "type": "real"
+    },
+    {
+      "id": "d4",
+      "t": "declare",
+      "name": "somma",
+      "type": "real"
+    },
+    {
+      "id": "d5",
+      "t": "comment",
+      "text": "Chiede n finché non è positivo"
+    },
+    {
+      "id": "d6",
+      "t": "dowhile",
+      "body": [
+        {
+          "id": "d7",
+          "t": "input",
+          "var": "n"
+        }
+      ],
+      "cond": "n <= 0"
+    },
+    {
+      "id": "d8",
+      "t": "assign",
+      "target": "somma",
+      "value": "0"
+    },
+    {
+      "id": "d9",
+      "t": "for",
+      "var": "i",
+      "from": "1",
+      "to": "n",
+      "step": "1",
+      "body": [
+        {
+          "id": "d10",
+          "t": "input",
+          "var": "x"
+        },
+        {
+          "id": "d11",
+          "t": "assign",
+          "target": "somma",
+          "value": "somma + x"
+        }
+      ]
+    },
+    {
+      "id": "d12",
+      "t": "output",
+      "value": "\"Media: \" & somma / n"
+    }
+  ]
+}

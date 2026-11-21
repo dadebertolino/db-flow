@@ -1,0 +1,56 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Contar los positivos",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee números enteros hasta que se introduzca 0 y luego escribe cuántos eran positivos (el 0 final no cuenta). Escribe solo el resultado.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "5",
+          "-2",
+          "3",
+          "0"
+        ],
+        "out": [
+          "2"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ]
+      },
+      {
+        "in": [
+          "-1",
+          "-2",
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        "out": [
+          "4"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

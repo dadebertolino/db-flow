@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Summe der ersten n Zahlen",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies eine ganze Zahl n (0 oder größer) ein und gib die Summe 1 + 2 + … + n aus, berechnet mit einer Schleife. Gib nur das Ergebnis aus.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "10"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "100"
+        ],
+        "out": [
+          "5050"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

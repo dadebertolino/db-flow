@@ -1,0 +1,44 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Cuenta atrás",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee un número entero n (al menos 1) y escribe los números de n a 1, uno por línea.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "5"
+        ],
+        "out": [
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

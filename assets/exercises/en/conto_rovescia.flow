@@ -1,0 +1,44 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Countdown",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read an integer n (at least 1) and output the numbers from n down to 1, one per line.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3"
+        ],
+        "out": [
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "5"
+        ],
+        "out": [
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

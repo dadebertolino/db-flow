@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Gerade oder ungerade",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lies eine ganze Zahl ein und gib wahr aus, wenn sie gerade ist, falsch, wenn sie ungerade ist.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "wahr"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "falsch"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "wahr"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-3"
+        ],
+        "out": [
+          "falsch"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

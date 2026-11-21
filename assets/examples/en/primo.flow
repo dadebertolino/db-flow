@@ -1,0 +1,89 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Prime number",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "p1",
+      "t": "declare",
+      "name": "n",
+      "type": "integer"
+    },
+    {
+      "id": "p2",
+      "t": "declare",
+      "name": "d",
+      "type": "integer"
+    },
+    {
+      "id": "p3",
+      "t": "declare",
+      "name": "is_prime",
+      "type": "boolean"
+    },
+    {
+      "id": "p4",
+      "t": "input",
+      "var": "n"
+    },
+    {
+      "id": "p5",
+      "t": "assign",
+      "target": "is_prime",
+      "value": "n >= 2"
+    },
+    {
+      "id": "p6",
+      "t": "assign",
+      "target": "d",
+      "value": "2"
+    },
+    {
+      "id": "p7",
+      "t": "while",
+      "cond": "d * d <= n and is_prime",
+      "body": [
+        {
+          "id": "p8",
+          "t": "if",
+          "cond": "n % d == 0",
+          "then": [
+            {
+              "id": "p9",
+              "t": "assign",
+              "target": "is_prime",
+              "value": "false"
+            }
+          ],
+          "else": []
+        },
+        {
+          "id": "p10",
+          "t": "assign",
+          "target": "d",
+          "value": "d + 1"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "t": "if",
+      "cond": "is_prime",
+      "then": [
+        {
+          "id": "p12",
+          "t": "output",
+          "value": "n & \" is prime\""
+        }
+      ],
+      "else": [
+        {
+          "id": "p13",
+          "t": "output",
+          "value": "n & \" is not prime\""
+        }
+      ]
+    }
+  ]
+}

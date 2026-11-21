@@ -1,0 +1,57 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Media di n numeri",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi quanti numeri verranno inseriti (n, almeno 1), poi gli n numeri reali, e scrivi la loro media. Scrivi solo il risultato.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "out": [
+          "5"
+        ]
+      },
+      {
+        "in": [
+          "2",
+          "1",
+          "2"
+        ],
+        "out": [
+          "1.5"
+        ]
+      },
+      {
+        "in": [
+          "4",
+          "10",
+          "0",
+          "0",
+          "0"
+        ],
+        "out": [
+          "2.5"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "1",
+          "-7.5"
+        ],
+        "out": [
+          "-7.5"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

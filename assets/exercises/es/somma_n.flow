@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Suma de los primeros n números",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee un número entero n (0 o más) y escribe la suma 1 + 2 + … + n, calculada con un bucle. Escribe solo el resultado.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "10"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "100"
+        ],
+        "out": [
+          "5050"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

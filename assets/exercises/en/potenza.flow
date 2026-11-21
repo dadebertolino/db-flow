@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Power with a loop",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Read a base b and an exponent e (integers, e ≥ 0) and output b to the power of e, computed with a loop of multiplications. Output only the result.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "2",
+          "3"
+        ],
+        "out": [
+          "8"
+        ]
+      },
+      {
+        "in": [
+          "5",
+          "0"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "81"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2",
+          "3"
+        ],
+        "out": [
+          "-8"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

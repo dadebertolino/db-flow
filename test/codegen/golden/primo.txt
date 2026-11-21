@@ -1,0 +1,20 @@
+ALGORITMO Numero primo
+INIZIO
+    DICHIARA n COME INTERO
+    DICHIARA d COME INTERO
+    DICHIARA primo COME BOOLEANO
+    LEGGI n
+    primo ← n >= 2
+    d ← 2
+    MENTRE d * d <= n and primo ESEGUI
+        SE n % d == 0 ALLORA
+            primo ← falso
+        FINE SE
+        d ← d + 1
+    FINE MENTRE
+    SE primo ALLORA
+        SCRIVI n & " è primo"
+    ALTRIMENTI
+        SCRIVI n & " non è primo"
+    FINE SE
+FINE

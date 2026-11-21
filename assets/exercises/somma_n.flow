@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Somma dei primi n numeri",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Leggi un numero intero n (0 o più) e scrivi la somma 1 + 2 + … + n, calcolata con un ciclo. Scrivi solo il risultato.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "10"
+        ]
+      },
+      {
+        "in": [
+          "1"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "100"
+        ],
+        "out": [
+          "5050"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "0"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Pair ou impair",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lisez un nombre entier et affichez vrai s'il est pair, faux s'il est impair.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "4"
+        ],
+        "out": [
+          "vrai"
+        ]
+      },
+      {
+        "in": [
+          "7"
+        ],
+        "out": [
+          "faux"
+        ]
+      },
+      {
+        "in": [
+          "0"
+        ],
+        "out": [
+          "vrai"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-3"
+        ],
+        "out": [
+          "faux"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}

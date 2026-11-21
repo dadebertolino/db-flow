@@ -1,0 +1,58 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Fakultät",
+  "kind": "algorithm",
+  "body": [
+    {
+      "id": "f1",
+      "t": "declare",
+      "name": "n",
+      "type": "integer"
+    },
+    {
+      "id": "f2",
+      "t": "declare",
+      "name": "i",
+      "type": "integer"
+    },
+    {
+      "id": "f3",
+      "t": "declare",
+      "name": "f",
+      "type": "integer"
+    },
+    {
+      "id": "f4",
+      "t": "input",
+      "var": "n"
+    },
+    {
+      "id": "f5",
+      "t": "assign",
+      "target": "f",
+      "value": "1"
+    },
+    {
+      "id": "f6",
+      "t": "for",
+      "var": "i",
+      "from": "2",
+      "to": "n",
+      "step": "1",
+      "body": [
+        {
+          "id": "f7",
+          "t": "assign",
+          "target": "f",
+          "value": "f * i"
+        }
+      ]
+    },
+    {
+      "id": "f8",
+      "t": "output",
+      "value": "n & \"! = \" & f"
+    }
+  ]
+}

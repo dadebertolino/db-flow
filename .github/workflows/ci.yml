@@ -1,0 +1,22 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        # Stessa versione usata in locale: aggiornarla insieme a quella del Mac.
+        with: { channel: stable, flutter-version: 3.47.2 }
+      - run: bash tool/check_denylist.sh
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: flutter analyze
+      # arduino-cli e core AVR, per i test che compilano gli sketch generati.
+      # Stesse versioni dell'Arduino IDE sul Mac: aggiornarle insieme.
+      - uses: arduino/setup-arduino-cli@v2
+        with: { version: 1.6.0 }
+      - uses: actions/cache@v4
+        with: { path: ~/.arduino15, key: arduino-cli-1.6.0-avr-1.8.8 }
+      - run: arduino-cli core update-index && arduino-cli core install arduino:avr@1.8.8
+      - run: flutter test

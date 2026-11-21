@@ -1,0 +1,68 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Dimmer mit Potentiometer",
+  "kind": "arduino",
+  "arduino": {
+    "board": "uno",
+    "baud": 9600,
+    "pins": [
+      {
+        "name": "POT",
+        "pin": "A0",
+        "mode": "analogInput",
+        "component": "potentiometer"
+      },
+      {
+        "name": "LED",
+        "pin": "9",
+        "mode": "output",
+        "component": "led"
+      }
+    ]
+  },
+  "setup": [
+    {
+      "id": "d1",
+      "t": "declare",
+      "name": "wert",
+      "type": "integer"
+    },
+    {
+      "id": "d2",
+      "t": "declare",
+      "name": "helligkeit",
+      "type": "integer"
+    }
+  ],
+  "body": [
+    {
+      "id": "d3",
+      "t": "analogRead",
+      "var": "wert",
+      "pin": "POT"
+    },
+    {
+      "id": "d4",
+      "t": "assign",
+      "target": "helligkeit",
+      "value": "int(wert / 4)"
+    },
+    {
+      "id": "d5",
+      "t": "analogWrite",
+      "pin": "LED",
+      "value": "helligkeit"
+    },
+    {
+      "id": "d6",
+      "t": "output",
+      "value": "\"Potentiometer: \" & wert & \"  LED: \" & helligkeit"
+    },
+    {
+      "id": "d7",
+      "t": "delay",
+      "ms": "100"
+    }
+  ]
+}

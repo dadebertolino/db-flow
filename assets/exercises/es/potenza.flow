@@ -1,0 +1,51 @@
+{
+  "format": "db-flow",
+  "version": 2,
+  "name": "Potencia con un bucle",
+  "kind": "algorithm",
+  "body": [],
+  "exercise": {
+    "text": "Lee una base b y un exponente e (enteros, e ≥ 0) y escribe b elevado a e, calculado con un bucle de multiplicaciones. Escribe solo el resultado.",
+    "locked": true,
+    "cases": [
+      {
+        "in": [
+          "2",
+          "3"
+        ],
+        "out": [
+          "8"
+        ]
+      },
+      {
+        "in": [
+          "5",
+          "0"
+        ],
+        "out": [
+          "1"
+        ]
+      },
+      {
+        "in": [
+          "3",
+          "4"
+        ],
+        "out": [
+          "81"
+        ],
+        "hidden": true
+      },
+      {
+        "in": [
+          "-2",
+          "3"
+        ],
+        "out": [
+          "-8"
+        ],
+        "hidden": true
+      }
+    ]
+  }
+}
