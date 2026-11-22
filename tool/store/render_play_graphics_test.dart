@@ -150,4 +150,79 @@ void main() {
       }
     });
   });
+
+  // Microsoft Store (Partner Center › Schede dello Store › Logo dello Store e
+  // immagini promozionali), in build/store/microsoft/: tutte opache.
+  testWidgets('genera la grafica del Microsoft Store', (tester) async {
+    await tester.runAsync(() async {
+      await _loadRoboto();
+      const out = 'build/store/microsoft';
+      void background(Canvas c, double w, double h) => c.drawRect(
+        Rect.fromLTWH(0, 0, w, h),
+        Paint()..shader = ui.Gradient.linear(Offset.zero, Offset(w, h), [blueLight, blueDark]),
+      );
+      void centered(
+        Canvas c,
+        String s,
+        double y,
+        double size,
+        FontWeight weight,
+        Color color,
+        double w,
+      ) {
+        final p = TextPainter(
+          text: TextSpan(
+            text: s,
+            style: TextStyle(
+              fontFamily: 'Roboto',
+              fontSize: size,
+              fontWeight: weight,
+              color: color,
+            ),
+          ),
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+        )..layout(minWidth: w * 0.84, maxWidth: w * 0.84);
+        p.paint(c, Offset(w * 0.08, y));
+      }
+
+      // icona del riquadro 300×300 e box art 1:1 2160×2160: uguali in ogni lingua
+      await _save('$out/tile-300.png', 300, 300, opaque: true, (c) => paintLogo(c, 300));
+      await _save('$out/box-art-2160.png', 2160, 2160, opaque: true, (c) {
+        background(c, 2160, 2160);
+        c.save();
+        c.translate(380, 200);
+        paintLogo(c, 1400, background: false, scale: 0.95);
+        c.restore();
+        centered(c, 'DB Flow', 1640, 260, FontWeight.bold, white, 2160);
+      });
+
+      for (final MapEntry(key: lang, value: tagline) in _taglines.entries) {
+        // poster 2:3, 1440×2160
+        await _save('$out/poster-$lang.png', 1440, 2160, opaque: true, (c) {
+          background(c, 1440, 2160);
+          c.save();
+          c.translate(220, 180);
+          paintLogo(c, 1000, background: false, scale: 0.95);
+          c.restore();
+          centered(c, 'DB Flow', 1240, 200, FontWeight.bold, white, 1440);
+          centered(c, tagline, 1500, 84, FontWeight.w500, white, 1440);
+          centered(c, 'Python · C · Arduino', 1820, 72, FontWeight.w500, amber, 1440);
+        });
+        // immagine 16:9, 3840×2160 (come la grafica di Google Play, più grande)
+        await _save('$out/hero-$lang.png', 3840, 2160, opaque: true, (c) {
+          background(c, 3840, 2160);
+          c.save();
+          c.translate(240, 300);
+          paintLogo(c, 1560, background: false, scale: 0.95);
+          c.restore();
+          const x = 1960.0, w = 1700.0;
+          _text(c, 'DB Flow', const Offset(x, 560), 360, FontWeight.bold, white, w);
+          _text(c, tagline, const Offset(x, 1000), 140, FontWeight.w500, white, w);
+          _text(c, 'Python · C · Arduino', const Offset(x, 1420), 120, FontWeight.w500, amber, w);
+        });
+      }
+    });
+  });
 }

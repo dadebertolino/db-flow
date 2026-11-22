@@ -86,6 +86,19 @@ How to try it:
 Flowcharts are stored only in the app's local data folder, which Windows removes when the app is uninstalled. They can be saved as .flow files with "Save as" and opened again by double-clicking them. The app declares only the runFullTrust capability required by desktop apps.
 ```
 
+## Grafica
+
+Generata da `flutter test tool/store/render_play_graphics_test.dart` (insieme a
+quella di Google Play) in `build/store/microsoft/`, tutta opaca:
+
+| Campo in Partner Center | File | Misura |
+|---|---|---|
+| Poster 2:3 (consigliata) | `poster-<lingua>.png` | 1440×2160 |
+| Box art 1:1 | `box-art-2160.png` (uguale in ogni lingua) | 2160×2160 |
+| Icona del riquadro / Store logo 1:1 | `tile-300.png` | 300×300 |
+| Immagine 16:9 (vetrine in evidenza, facoltativa) | `hero-<lingua>.png` | 3840×2160 |
+| Screenshot | dal PC: `%TEMP%\dbflow_shots\windows\<lingua>\` | 1920×1080 |
+
 ## it — Italiano
 
 ### Descrizione
