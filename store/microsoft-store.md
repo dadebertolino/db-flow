@@ -56,6 +56,21 @@ Tutti.
 ### Pacchetti
 Caricare `db_flow.msix`. Famiglie di dispositivi: solo **Windows Desktop**.
 
+### Capability con restrizioni (Opzioni di invio)
+
+Al caricamento del pacchetto Partner Center avvisa: «The following restricted
+capabilities require approval before you can use them in your app:
+runFullTrust». È normale per ogni app desktop: la motivazione va nel riquadro
+«Restricted capabilities» delle Opzioni di invio.
+
+```text
+DB Flow is a desktop (Win32) app built with Flutter and packaged as MSIX. runFullTrust is required for every packaged desktop application to run. The app does not use the network and collects no data.
+```
+
+Proprietà: nella sezione «Display mode» (Windows Mixed Reality) **nessuna
+spunta**, né PC né HoloLens: DB Flow è un'app 2D in finestra. Requisiti di
+sistema: nessuna spunta nei minimi; nei consigliati al massimo tastiera e mouse.
+
 ### Note per la certificazione (in inglese, le legge il revisore)
 
 ```text
