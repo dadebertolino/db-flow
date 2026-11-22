@@ -34,11 +34,19 @@ const _langs = String.fromEnvironment('SHOT_LANGS', defaultValue: 'it,en,fr,de,e
 /// Tempo lasciato allo script per catturare il simulatore.
 const _captureWait = Duration(milliseconds: 2500);
 
-/// Dispositivo reso sul Mac: `--dart-define=SHOT_DEVICE=ipad`; di default il Mac.
-const _device = String.fromEnvironment('SHOT_DEVICE', defaultValue: 'mac');
+/// Dispositivo reso dal test: sul Mac `--dart-define=SHOT_DEVICE=ipad`, di
+/// default il Mac; sul PC sempre Windows.
+final _device = Platform.isWindows
+    ? 'windows'
+    : const String.fromEnvironment('SHOT_DEVICE', defaultValue: 'mac');
 
-/// Misure in punti (× 2 = pixel): Mac 2880×1800, iPad 13" 2064×2752.
-const _sizes = {'mac': Size(1440, 900), 'ipad': Size(1032, 1376)};
+/// Misure in punti e densità: Mac 2880×1800, iPad 13" 2064×2752, Windows
+/// 1920×1080 (Microsoft Store: almeno 1366×768).
+const _sizes = {
+  'mac': (Size(1440, 900), 2.0),
+  'ipad': (Size(1032, 1376), 2.0),
+  'windows': (Size(1280, 720), 1.5),
+};
 
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -53,14 +61,16 @@ void main() {
 }
 
 Future<void> _session(WidgetTester tester, AppLanguage lang) async {
-  // Sul Mac si rende l'immagine da sé, alla misura del dispositivo scelto
-  // (lo schermo di sviluppo è più piccolo; il simulatore iPad senza finestra
-  // è troppo lento e instabile). L'iPad si comporta come su iOS e ha lo
-  // spazio della barra di stato (24 punti), che resta vuoto.
-  final mac = Platform.isMacOS;
+  // Sul Mac e sul PC si rende l'immagine da sé, alla misura del dispositivo
+  // scelto (lo schermo di sviluppo è più piccolo; il simulatore iPad senza
+  // finestra è troppo lento e instabile). L'iPad si comporta come su iOS e ha
+  // lo spazio della barra di stato (24 punti), che resta vuoto. Su Windows le
+  // immagini vanno in %TEMP%\dbflow_shots\windows\<lingua>.
+  final mac = Platform.isMacOS || Platform.isWindows;
   if (mac) {
-    tester.view.physicalSize = _sizes[_device]! * 2;
-    tester.view.devicePixelRatio = 2;
+    final (size, ratio) = _sizes[_device]!;
+    tester.view.physicalSize = size * ratio;
+    tester.view.devicePixelRatio = ratio;
     addTearDown(tester.view.reset);
     if (_device == 'ipad') {
       debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
@@ -121,7 +131,7 @@ Future<void> _session(WidgetTester tester, AppLanguage lang) async {
       final view = tester.binding.renderViews.first;
       final layer = view.debugLayer! as OffsetLayer;
       // Il livello radice è già in pixel fisici.
-      final image = await layer.toImage(Offset.zero & (view.size * 2));
+      final image = await layer.toImage(Offset.zero & tester.view.physicalSize);
       final png = await image.toByteData(format: ui.ImageByteFormat.png);
       await file.parent.create(recursive: true);
       await file.writeAsBytes(png!.buffer.asUint8List(), flush: true);

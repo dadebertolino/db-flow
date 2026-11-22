@@ -30,7 +30,7 @@ App Flutter (iOS, iPadOS, Android e macOS) per insegnanti e studenti: diagrammi 
 2. `git clone https://github.com/dadebertolino/db-flow.git`, `flutter pub get`, `flutter run -d windows`.
 3. Provare: esempi, esecuzione, freccia «←», monospazio (Consolas), «Salva con nome», export PNG/SVG/PDF, tema scuro.
 4. Pacchetto di prova installabile: `dart run msix:create` (certificato di prova). Poi **doppio clic su un `.flow`** ad app chiusa e ad app aperta (deve aprirsi nella stessa finestra); disinstallazione (i diagrammi devono sparire).
-5. **Screenshot** per lo Store (almeno 1366×768, ideale 1920×1080 o 2560×1440), negli stessi 7 soggetti degli altri store.
+5. **Screenshot** per lo Store, 1920×1080, gli stessi 7 soggetti degli altri store, in cinque lingue: `flutter test integration_test\screenshots_test.dart -d windows` → `%TEMP%\dbflow_shots\windows\<lingua>\` (il test rende la finestra da sé, con il font di Windows; `--dart-define=SHOT_LANGS=it` per una lingua sola).
 
 ### In Partner Center (l'utente)
 1. ~~Account aziendale verificato~~, ~~nome «DB Flow» prenotato~~ (21 novembre 2026).
